@@ -1,0 +1,67 @@
+%This variable contains the path leading to the "LaTeX-Def"-files.
+%
+%Notice: Place the "LaTeX-Def"-folder on the same harddisk as your LaTeX-files!
+%Be sure not to forget the slash at the beginning and the end of the path!
+%\newcommand{\defaultPath}{/Lennys_Docs/LaTeX_Def/}
+\newcommand{\defaultPath}{/docs/LaTeX_Def/}
+
+\input{\defaultPath packages}
+\input{\defaultPath commands}
+\input{\defaultPath preamble}
+%\input{./title_page}
+
+\allowdisplaybreaks
+\reversemarginpar
+\newcommand{\numberthis}[1]{%
+	\stepcounter{equation}\tag{\theequation}\label{#1}%
+}%
+
+\nsection{Aufgabe 1}%
+\nsubsection{Aufgabe 1a)}
+\incfigs{a1a}{NWM für $t<t_S$ mit $v(t<t_S)\equiv 0\quad\rightarrow\quad$KS}{a1a}%
+%
+\noindent Berechne den Frequenzgang (FG) mit (formaler) KWSR als Gesamtimpedanz. Bringe nach \Eref{a1a_FG_Poly1} alle Terme auf den Hauptnenner und ordne sie:
+\begin{align*}%
+	\uH(\jw)&=\frac{\uU_j}{\uV}=\jw L_2+R_2+(\jw L_1+R_1)\|\lr{(}{%
+		\jw L_3+R_3\|\frac{1}{\jw C}%
+	}{)}\\[2.5mm]%
+%
+	&=\jw L_2+R_2+\frac{%
+		(\jw L_1+R_1)\lr{(}{%
+			\jw L_3+R_3\|\frac{1}{\jw C}%
+		}{)}
+	}{%
+		(\jw L_1+R_1)+\lr{(}{%
+			\jw L_3+R_3\|\frac{1}{\jw C}%
+		}{)}%
+	}\ceqn{%
+		\cdot\frac{\jw R_3C+1}{\jw R_3C+1}%
+	}\\[2.5mm]%
+%
+	&=\numberthis{a1a_FG_Poly1}\jw L_2+R_2+\blue{\frac{%
+		(\jw L_1+R_1)\lr{(}{%
+			(\jw)^2R_3CL_3+\jw L_3+R_3%
+		}{)}%
+	}{%
+		(\jw L_1+R_1)(\jw R_3C+1)+\lr{(}{%
+			(\jw)^2R_3CL_3+\jw L_3+R_3%
+		}{)}%
+	}}\\[2.5mm]%
+%
+	&=:\frac{%
+		b_3(\jw)^3+b_2(\jw)^2+b_1(\jw)+b_0%
+	}{%
+		(\jw)^2R_3C(L_1+L_2)+(\jw)(R_1R_3C+L_1+L_2)+R_1+R_3%
+	}=:\frac{\uP(\jw)}{\uQ(\jw)}%
+\end{align*}
+%
+Definiere die Koeffizienten für den Zähler:
+\begin{align*}
+	b_3&:=R_3C((L_1+L_3)L_2+L_1L_3),\quad b_2:=R_3C(R_1(L_2+L_3)+R_2(L_1+L_3))+L_2(L_1+L_3)+L_1L_3>0\\[2.5mm]%
+%
+	b_1&:=R_2(R_1R_3C+L_1+L_3)+(R_1+R_3)L_2+R_3L_1+R_1L_3>0,\quad b_0:=(R_1+R_3)R_2+R_1R_3>0%
+\end{align*}%
+%
+
+%Include your document here!
+\input{\defaultPath ending}
