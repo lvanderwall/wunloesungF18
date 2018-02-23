@@ -1,0 +1,24 @@
+# git ls-files --others --exclude-from=.git/info/exclude
+
+# LaTeX / PDFLaTeX files
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.log
+*.out
+*.pdf
+*.synctex*
+*.tmp
+*.toc
+!graphics/*.pdf
+
+# SVN databases
+.svn
+
+# WinFIG
+*.bak
+
+# Eigene
+*.sav
+opt_*
