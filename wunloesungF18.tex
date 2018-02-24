@@ -62,5 +62,109 @@ Definiere die Koeffizienten für den Zähler:
 	b_1&:=R_2(R_1R_3C+L_1+L_3)+(R_1+R_3)L_2+R_3L_1+R_1L_3>0,\quad b_0:=(R_1+R_3)R_2+R_1R_3>0%
 \end{align*}%
 %
+%
+\nsubsection{Aufgabe 1b)}%
+Sei $t<t_S$ und $\jw\rightarrow\us\im[C]$\marginpar{\fbox{$C>0$}}. Unterscheide die Fälle $C>0$ und $C=0$, beginne mit $C>0$. Prüfe $\uH(\us)$ auf Teilerfremdheit. Verwende dabei, dass Teilerfremdheit bei Polynomdivision (Poly.-Div.) erhalten bleibt, d.h. aus \Eref{a1a_FG_Poly1} folgt: \glqq$\uH(\us)$ teilerfremd\grqq $\Leftrightarrow$ \glqq$\blue{%
+	\uH_1(\us)=:\frac{\uP_1(\us)}{\uQ(\us)}%
+}$ teilerfremd\grqq:
+%
+\begin{align*}%
+	\uP_1(\us)&\overset{!}{=}0\quad\arr\quad\us_1=-\frac{R_1}{L_1}\quad\vee\quad\uP_2(\us):=\us^2R_3CL_4+\us L_3+R_3\overset{!}{=}0,\\[2.5mm]%
+%
+	\numberthis{a1b_FG_Poly2}\uQ\lr{(}{%
+		-\frac{R_1}{L_1}%
+	}{)}&=0+\frac{R_1^2R_3CL_3}{L_1^2}-\frac{R_1L_3}{L_1}+R_3=\ubcom{>0}{R_3}\ubcom{\neq0\text{ (Aufgabe)}}{%
+		\lr{(}{%
+			1-\lr{(}{%
+				-\frac{R_1^2CL_3}{L_1^2}+\frac{R_1L_3}{R_3L_1}%
+			}{)}%
+		}{)}%
+	}\neq0%
+\end{align*}%
+%
+Bleibt zu zeigen, dass $\uP_2(\us),\:\uQ(\us)$ teilerfremd sind. Erhalte per Poly.-Div:
+%
+\[%
+	\frac{\uQ(\us)}{\uP_2(\us)}=1+\frac{%
+		(\us L_1+R_1)(\us R_3C+1)%
+	}{%
+		\uP_2(\us)%
+	}=:\frac{\uP_3(\us)}{\uP_2(\us)}%
+\]%
+%
+Verwende wieder, dass Teilerfremdheit bei Poly.-Div. erhalten bleibt, d.h. \glqq$\frac{\uQ(\us)}{\uP_2(\us)}$ teilerfremd\grqq $\Leftrightarrow$ \glqq$\frac{\uP_3(\us)}{\uP_2(\us)}$ teilerfremd\grqq. Prüfe die Teilerfremdheit von $\uP_2(\us),\:\uP_3(\us)$:
+%
+\begin{align*}%
+	\uP_3(\us)&\overset{!}{=}0\quad\arr\quad\us_2=-\frac{R_1}{L_1},&\us_3&=-\frac{1}{R_3C}\\[2.5mm]%
+%
+	\numberthis{a1b_teilerfremd}\uP_2\lr{(}{%
+		-\frac{R_1}{L_1}%
+	}{)}&=\frac{R_1^2R_3CL_3}{L_1^2}-\frac{R_1L_3}{L_1}+R_3\utcom{\Eref{a1b_FG_Poly2}}{\neq}0,&\uP_2\lr{(}{%
+		-\frac{1}{R_3C}%
+	}{)}&=\cancel{\frac{L_3}{R_3C}}-\cancel{\frac{R_3}{CL_3}}+R_3=R_3>0%
+\end{align*}%
+%
+$\uP_2(\us),\:\uP_3(\us)$ sind teilerfremd, also sind auch $\uP(\us),\:\uQ(\us)$ teilerfremd! Das NWM besitzt für $t<t_S$
+\[%
+	\lr{.}{%
+		\begin{aligned}%
+			\bullet\quad n_A&=4\text{ diff.-bare Var.: }\vec{x}_A(t)=(i_{L_1},\:i_{L_2},\:i_{L_3},\:u_C)^T\\[2.5mm]%
+		%
+			\bullet\quad n_R&\geq 2\text{ zustandsred. Glg.: }\begin{aligned}%
+				0&=i_{L_2}(t)+j(t)\\%
+				0&=i_{L_1}(t)-i_{L_2}(t)-i_{L_3}(t)%
+			\end{aligned}%
+		\end{aligned}%
+	}{\}}\begin{gathered}%
+		2=4-2\geq n_A-n_R=n\geq\grad\uQ(\us)=2\\[2.5mm]%
+		\arr\quad\uQ(\us)\text{ liefert alle $n=2$ nat. Freq.!}
+	\end{gathered}%
+\]%
+%
+Für $C>0$ ist $\uQ(\us)$ ein Hurwitzpolynom 2.Grades, also haben alle nat. Freq. einen negativen Realteil und das NWM ist für $t<t_S$ asympt. stabil. Zusätzlich ist $\grad{\uP(\us)}-\grad{\uQ(\us)}=3-2=1>0$, also ist das NWM bzgl. $j(t)$ (mind.) einmal differenzierend!
 
+\lf\marginpar{\fbox{$C=0$}}Betrachte $C=0$, aus A1a) folgt: $b_3=a_2=0,\quad b_2,\:a_1\neq0\quad\arr\quad\grad\uP(\us)-\grad\uQ(\us)=2-1=1>0$, also ist das NWM bzgl. $j(t)$ wieder (mind.) einmal differenzierend. Vereinfache den FG:
+\[%
+	\uH(\us)\utcom{\Eref{a1a_FG_Poly1}}{=}\us L_2+R_2+\frac{%
+		(\us L_1+R_1)(\us L_3+R_3)%
+	}{%
+		\us(L_1+L_3)+R_1+R_3%
+	}=:\us L_2+R_2+\frac{\uP_4(\us)}{\uQ(\us)}%
+\]%
+%
+Die Prüfung auf Teilerfremdheit kann aus dem Fall $C>0$ übernommen werden, nur dass in \Eref{a1b_teilerfremd} die Nullstelle $\us_3$ wegfällt -- $\uH(\us)$ ist auch für $C=0$ teilerfremd! Das NWM besitzt für $t<t_S$:
+%%
+%Teilerfremdheit bleibt bei Poly.-Div. erhalten, d.h. \glqq$\uH(\us)$ teilerfremd\grqq $\Leftrightarrow$ \glqq$\frac{\uP_4(\us)}{\uQ(\us)}$ teilerfremd\grqq:
+%\begin{align*}%
+%	\uQ(\us)&\overset{!}{=}0\quad\arr\quad\us_1=-\frac{R_1+R_3}{L_1+L_3}<0\\[2.5mm]%
+%%
+%	\uP_4(\us_1)&=\frac{%
+%		\bigl(-L_1(\cancel{R_1}+R_3)+R_1(\cancel{L_1}+L_3)\bigr)\bigl(-L_3(R_1+\cancel{R_3})+R_3(L_1+\cancel{L_3})\bigr)%
+%	}{%
+%		(L_1+L_3)^2%
+%	}=\ubcom{<0}{%
+%		\frac{-L_1^2R_3^2}{(L_1+L_3)^2}%
+%	}\ubcom{>0\text{ (Aufgabe für $C=0$)}}{%
+%		\lr{(}{%
+%			1-\frac{R_1L_3}{R_1L_3}%
+%		}{)}^2%
+%	}\neq0%
+%\end{align*}%
+%%
+%Also sind $\uP(\us),\:\uQ(\us)$ teilerfremd! Das NWM besitzt für $t<t_S$ wegen $C=0$
+\[%
+	\lr{.}{\begin{aligned}%
+		\bullet\quad n_A&=3\text{ diff.-bare Var.: }\vec{x}_A(t)=(i_{L_1},\:i_{L_2},\:i_{L_3})^T(t)\\[2.5mm]%
+	%
+		\bullet\quad n_R&\geq 2\text{ zustandsred. Glg. (wie für $C>0$)}%
+	\end{aligned}}{\}}\begin{gathered}%
+		1=3-2\geq n_A-n_R=n\geq\grad\uQ(\us)=1\\[2.5mm]%
+	%
+		\arr\quad\uQ(\us)\text{ liefert alle $n=1$ nat. Freq.!}
+	\end{gathered}%
+\]%
+%
+Die einzige nat. Freq. ist $\us_4=-\frac{R_1+R_3}{L_1+L_3}<0$, also ist das NWM für $t<t_S$ asympt. stabil!
+%
+\anm Für $C=0$ vereinfacht sich die Zweiggleichung (ZGL) der Kapazität zu $i_C(t)=0$: Damit kommt in keiner ZGL mehr die Ableitung von $u_C(t)$ vor, d.h. $u_C(t)$ ist für $C=0$ \textit{nicht} diff.-bar!
 \input{\defaultPath ending}
