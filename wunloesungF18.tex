@@ -167,4 +167,89 @@ Die Prüfung auf Teilerfremdheit kann aus dem Fall $C>0$ übernommen werden, nur
 Die einzige nat. Freq. ist $\us_4=-\frac{R_1+R_3}{L_1+L_3}<0$, also ist das NWM für $t<t_S$ asympt. stabil!
 %
 \anm Für $C=0$ vereinfacht sich die Zweiggleichung (ZGL) der Kapazität zu $i_C(t)=0$: Damit kommt in keiner ZGL mehr die Ableitung von $u_C(t)$ vor, d.h. $u_C(t)$ ist für $C=0$ \textit{nicht} diff.-bar!
+%
+%
+\nsubsection{Aufgabe 1c)}%
+Sei $t<t_S$. Vereinfache $j(t)$ mit (*) $\sin[x]\sin[y]=\frac{1}{2}\lr{(}{\cos[x-y]-\cos[x+y]}{)},\quad x,y\im$:
+\[%
+	j(t)\utcom{(*)}{=}\ubcom{%
+		\begin{gathered}%
+			\scriptstyle E_1 :=J_0+\frac{J_1}{2}\\%
+			\scriptstyle \omega_1 :=0\\%
+			\scriptstyle \varphi_1 :=0%
+		\end{gathered}%
+	}{%
+		J_0+\frac{J_1}{2}%
+	}\ubcom{%
+		\begin{gathered}%
+			\scriptstyle E_2 :=-\frac{J_1}{2}\\%
+			\scriptstyle \omega_2 :=2\omega_0\\%
+			\scriptstyle \varphi_2 :=-2\omega_0t_0%
+		\end{gathered}%
+	}{-\frac{J_1}{2}\cos[2\omega_0(t-t_0)]}=\sum_{k=1}^2E_k\cos[\omega_kt+\varphi_k]%
+\]%
+%
+Das als asympt. stabil vorausgesetzte NWM existiert für alle Zeiten und befindet sich für $t<t_S$ im HEZ, weil $j(t)$ rein harmonisch ist. Vereinfache den FG aus A1a) mit $R_i=R,\:L_i=L$:
+\[%
+	\uH(\jw)=\frac{%
+		(\jw)^33RCL^2+(\jw)^2L(4R^2C+3L)+(\jw)R(R^2C+6L)+3R^2%
+	}{%
+		(\jw)^22RCL+(\jw)(R^2C+2L)+2R%
+	}%
+\]%
+%
+Zerlege $\uH(\jw)=:K(\omega)e^{j(\varphi_P(\omega)-\varphi_Q(\omega))}$ in Betrag und Phase:
+\begin{align*}%
+	\text{Betrag: }K(\omega)&:=\abs{\uH(\jw)}=\sqrt{%
+		\frac{%
+			(\omega R(R^2C+6L)-\omega^3 3RCL^2)^2 + (3R^2-\omega^2L(4R^2C+3L))^2%
+		}{%
+			(\omega(R^2C+2L))^2 + (2R-\omega^2 2RCL)^2%
+		}%
+	},\quad K(0)=\frac{3}{2R}\\[2.5mm]%
+%
+	\text{Zähler: }\varphi_P(\omega)&:=\arctg[%
+		\frac{%
+			\omega R(R^2C+6L)-\omega^3 3RCL^2%
+		}{%
+			3R^2-\omega^2L(4R^2C+3L)%
+		}%
+	]+\case{%
+		0,&3R^2-\omega^2L(4R^2C+3L)>0,\quad\omega=\omega_1\\[2.5mm]%
+		\pi,&3R^2-\omega^2L(4R^2C+3L)<0,\quad\omega=\omega_2%
+	}\\[2.5mm]%
+%
+	\text{Nenner: }\varphi_Q(\omega)&:=\arctg[%
+		\frac{%
+			\omega(R^2C+2L)%
+		}{%
+			2R-\omega^2 2RCL%
+		}%
+	]+\case{%
+		0,&2R-\omega^2 2RCL>0,\quad\omega=\omega_1,\:\omega_2\\[2.5mm]%
+		\pi,&2R-\omega^2 2RCL<0,\quad\text{hier nicht}%
+	}%
+\end{align*}%
+%
+Prüfe die Fallunterscheidungen:
+\begin{align*}%
+	3R^2-\omega_1^2 2L(4R^2C+3L)&=3R>0,&3R^2-\omega_2^2 2L(4R^2C+3L)&=\ubcom{>0}{3R^2}\ubcom{%
+		<0\text{ (Aufgabe)}%
+	}{\lr{(}{%
+		1-4\omega_0^2\lr{(}{%
+			\frac{4}{3}CL+\frac{L^2}{R^2}%
+		}{)}%
+	}{)}} <0\\[2.5mm]%
+%
+	2R-\omega_1^2 2RCL&=2R>0,&2R-\omega_2^2 2RCL&=\ubcom{>0}{2R}\ubcom{%
+		>0\text{ (Aufgabe)}%
+	}{%
+		(1-4\omega_0^2CL)%
+	}>0%
+\end{align*}%
+%
+Berechne $u_j(t)$ per Superposition im HEZ:
+\[%
+	u_j(t)=u_{j,hez}(t)=\sum_{k=1}^2 E_k K(\omega_k)\cos[\omega_k t+\varphi_k+\varphi_P(\omega_k)-\varphi_Q(\omega_k)]%
+\]%
 \input{\defaultPath ending}
