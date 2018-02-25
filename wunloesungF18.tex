@@ -280,4 +280,33 @@ Das NWM aus \Fref{a1d} besitzt genau $n_R=1$ zustandsreduzierende Gleichung (ZRG
 \]%
 %
 Ein Vergleich mit \Eref{a1d_ZRG_ts-} zeigt, dass die AWe $\vec{x}_A(t_S^-)$ auch alle ZRGen bei $t=t_S^+$ erfüllen -- also sind die AWe bei $t=t_S^-$ hier (trotz ZRGen nach dem Schalten) immer konsistent!
+%
+%
+\nsubsection{Aufgabe 1e)}%
+Sei $t>t_S$. Berechne die ÜF mit $R_i=R,\:C=0,\:L_i=L$ im NWM aus \Fref{a1d} per doppeltem Spannungsteiler in Impedanzen. Verwende außerdem (*) $\uZ(\us):=\us L+R$:
+\begin{align*}%
+	\uH(\us)&:=\frac{%
+		\uU_{R_1}(\us)%
+	}{%
+		\uV(\us)%
+	}=\frac{%
+		\uU(\us)%
+	}{%
+		\uV(\us)%
+	}\cdot\frac{%
+		\uU_{R_1}(\us)%
+	}{%
+		\uU(\us)%
+	}=\frac{%
+		\us L_1+R_1%
+	}{%
+		(\us L_1+R_1)+(\us L_2+R_2)\|(\us L_3+R_3)%
+	}\cdot\frac{R_1}{\us L_1 + R_1}\ceqn{%
+		A:=\frac{R}{L}>0%
+	}\\[2.5mm]%
+%
+	&\utcom{(*)}{=}\frac{\uZ(\us)}{\uZ(\us)+\uZ(\us)\|\uZ(\us)}\cdot\frac{R}{\us L+R}=\frac{1}{%
+		1+\frac{1}{2}%
+	}\cdot\frac{R}{\us L+R}=\frac{2A}{3}\cdot\frac{1}{\us+A}\quad\multimapdotbothB\quad u_{R_1,\delta}(t)=\frac{2A}{3}\Theta(t)e^{-At}%
+\end{align*}%
 \input{\defaultPath ending}
