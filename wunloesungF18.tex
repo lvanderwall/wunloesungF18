@@ -252,4 +252,32 @@ Berechne $u_j(t)$ per Superposition im HEZ:
 \[%
 	u_j(t)=u_{j,hez}(t)=\sum_{k=1}^2 E_k K(\omega_k)\cos[\omega_k t+\varphi_k+\varphi_P(\omega_k)-\varphi_Q(\omega_k)]%
 \]%
+%
+%
+\nsubsection{Aufgabe 1d)}%
+Sei $t<t_S$. Die AWe vor dem Schalten $\vec{x}_A(t_S^-)$ erfüllen nach A1b) zwei ZRGen, die zweite liefert
+\eqn{\label{a1d_ZRG_ts-}%
+	i_{L_1}(t)-i_{L_2}(t)-i_{L_3}(t)=0\quad\arr\quad i_{L_1}(t_S^-)-i_{L_2}(t_S^-)-i_{L_3}(t_S^-)=0%
+}%
+%
+Sei nun $t>t_S$. Die STQ $j(t)$ wird kurzgeschlossen und kann weggelassen werden:
+\incfigs{a1d}{NWM für $t>t_S$. Ab e) ist $R_i=R,\:C=0,\:L_i=L\quad\arr\quad C\:\rightarrow\:\text{LL}$}{a1d}%
+
+\noindent Das NWM besitzt wegen $C>0$
+\[%
+	\lr{.}{\begin{aligned}%
+		\bullet\quad&\text{keine gesteuerten Quellen}\\[2.5mm]%
+	%
+		\bullet\quad&R,\:C.\:L\neq 0\text{ nur mit je gleichem VZ}%
+	\end{aligned}}{\}}\quad\arr\quad\begin{minipage}[c]{6cm}%
+		Es kann nur ZRGen vom Typ \glqq\casetxt{MGL}{SGL} nur aus \casetxt{$C$}{$L$} und/oder festen \casetxt{SPQ}{STQ}\grqq\: besitzen!%
+	\end{minipage}%
+\]%
+%
+Das NWM aus \Fref{a1d} besitzt genau $n_R=1$ zustandsreduzierende Gleichung (ZRG) dieser Typen:
+\[%
+	S_1:\quad i_{L_1}(t)-i_{L_2}(t)-i_{L_3}(t)=0\quad\arr\quad i_{L_1}(t_S^+)-i_{L_2}(t_S^+)-i_{L_3}(t_S^+)=0%
+\]%
+%
+Ein Vergleich mit \Eref{a1d_ZRG_ts-} zeigt, dass die AWe $\vec{x}_A(t_S^-)$ auch alle ZRGen bei $t=t_S^+$ erfüllen -- also sind die AWe bei $t=t_S^-$ hier (trotz ZRGen nach dem Schalten) immer konsistent!
 \input{\defaultPath ending}
