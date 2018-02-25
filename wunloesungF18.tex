@@ -309,4 +309,45 @@ Sei $t>t_S$. Berechne die ÜF mit $R_i=R,\:C=0,\:L_i=L$ im NWM aus \Fref{a1d} pe
 		1+\frac{1}{2}%
 	}\cdot\frac{R}{\us L+R}=\frac{2A}{3}\cdot\frac{1}{\us+A}\quad\multimapdotbothB\quad u_{R_1,\delta}(t)=\frac{2A}{3}\Theta(t)e^{-At}%
 \end{align*}%
+%
+%
+\nsubsection{Aufgabe 1f)}%
+Sei $t<t_S$.\marginpar{\fbox{$t<t_S$}} Das als asympt. stabil vorausgesetzte NWM existiert für alle Zeiten und befindet sich für $t<t_S$ in Ruhe, da für $t<t_S$ beide Quellen gleich Null sind: $j(t)=0$ für alle Zeiten und $v(t<t_S)\equiv0$, da $t_a>t_S$. Das bedeutet, dass alle Strome und Spannungen Null sind:
+\[%
+	\vec{x}_A(t)=\vec{0}=\vec{x}_A(t_S^-),\qquad u_{R_1}(t)=0,\qquad t<t_S%
+\]%
+%
+\marginpar{\fbox{$t>t_S$}}Sei $t>t_S$. Die AWe $\vec{x}_A(t_S^-)=\vec{0}$ werden nach A1d) stetig übernommen, also wird das NWM durch $v(t)$ aus dem Ruhezustand (RZ) angeregt! Berechne $u_{R_1}(t)$ als Antwort aus dem RZ per Faltung, definiere dazu die Hilfsfunktion $g_3(t)$ (Typ: \glqq nichtlinear\grqq):
+\[
+	\begin{aligned}%
+		\uG_3(\us)&:=\frac{2!}{\us^3}\uH(\us)=\frac{4A}{3}\cdot\frac{1}{\us^3(\us+A)}\utcom{Zuhalte-M.}{=}\frac{4A}{3}\lr{(}{%
+			\frac{\frac{1}{A}}{\us^3} + \frac{X}{\us^2} + \frac{Y}{\us} + \frac{-\frac{1}{A^3}}{\us + A}%
+		}{)}\\[2.5mm]%
+%
+		&\multimapdotbothBvert\\[2.5mm]%
+%
+		g_3(t)&:=\lr{(}{%
+			\Theta(t')t'^2*u_{R_1,\delta}(t')%
+		}{)}(t)=\frac{%
+			4\cancel{A}\Theta(t)%
+		}{%
+			3A^{\cancel{3}^2}%
+		}\lr{(}{%
+			\frac{(At)^2}{2}-At+1-e^{-At}%
+		}{)}\\[2.5mm]%
+%
+		u_{R_1}(t)&=\lr{(}{%
+			v(t')*_{R_1,\delta}(t')%
+		}{)}(t)=V_0g_3(t-t_a),\quad t>t_S%
+	\end{aligned}\ceqn{\begin{aligned}%
+		&\scriptstyle\text{Koeff.-Vgl. $\us^3$:}\\%
+		&\scriptstyle 0\overset{!}{=}\frac{1}{A}\cdot 0 + X\cdot 0 + Y\cdot 1 -\frac{1}{A^3}\cdot 1\\%
+		&\scriptstyle \arr\quad Y=\frac{1}{A^3}\\[2.5mm]%
+		\hline&\scriptstyle \text{Koeff.-Vgl. $\us^1$:}\\%
+		&\scriptstyle 0\overset{!}{=}\frac{1}{A}\cdot 1+X\cdot A+Y\cdot 0-\frac{1}{A^3}\cdot 0\\%
+		&\scriptstyle \arr\quad X=-\frac{1}{A^2}%
+	\end{aligned}}%
+\]%
+%
+\anm Die obige Darstellung für $u_{R_1}(t)$ gilt sogar für alle $t\im$.
 \input{\defaultPath ending}
