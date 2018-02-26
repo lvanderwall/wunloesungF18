@@ -453,17 +453,17 @@ Das NWM besitzt drei Zusatzströme:
 	i_{1}(t)\text{ ist Steuerstrom,}\qquad i_{r_{1,2}}(t)\text{ sind Ströme von idealen SPQen}%
 \]%
 %
-Stelle die Matrix für das modifizierte Knoten-$\uY$-Verfahren mit den Regeln aus dem Skript direkt auf:
+Stelle die Matrix mit den Regeln aus dem Skript direkt auf. Verwende $\uZ_1(\us):=R_1+\frac{1}{\us C_1}$:
 \[%
 	\LGSMat{cccc|ccc}{%
-		\us C_3&		-\us C_3&	0&		0&		1&						0&	0\\[2.5mm]%
-		-\us C_3&\us(C_2+C_3)&	0&		0&		0&						-1&	0\\[2.5mm]%
-		0&				0&		G_3&	0&		0&						0&	1\\[2.5mm]%
-		0&				0&		0&		G_2&	0&						1&	0\\[1.25mm]%
+		\us C_3&		-\us C_3&	0&		0&		1&				0&	0\\[2.5mm]%
+		-\us C_3&\us(C_2+C_3)&	0&		0&		0&				-1&	0\\[2.5mm]%
+		0&				0&		G_3&	0&		0&				0&	1\\[2.5mm]%
+		0&				0&		0&		G_2&	0&				1&	0\\[1.25mm]%
 \hline&&&&&&\\[-2.5mm]%
-		1&				0&		0&		0&		-\lr{(}{R_1+\frac{1}{\us C_1}}{)}&	0&	0\\[2.5mm]%
-		0&				-1&		0&		1&		0\red{-r_1}&				0&	0\\[2.5mm]%
-		0&				0&		1&		0&		0\red{-r_2}&				0&	0%
+		1&				0&		0&		0&		-\uZ_1(\us)&		0&	0\\[2.5mm]%
+		0&				-1&		0&		1&		0\red{-r_1}&		0&	0\\[2.5mm]%
+		0&				0&		1&		0&		0\red{-r_2}&		0&	0%
 	}{}\ubcom{=:\vec{\uX}(\us)}{\LGSMat{c}{%
 		\UPot_1\\[2.5mm]%
 		\UPot_2\\[2.5mm]%
