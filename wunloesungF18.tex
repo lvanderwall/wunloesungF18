@@ -441,4 +441,48 @@ Nun ist $u_{R_1}(t)$ für alle $t\im$ bekannt, berechne über die Ableitung im B
 \anm Nach dem Schalten wird $u_{R_1}(t)$ für $t\geq t_S$ berechnet (statt $t>t_S$), weil in \Fref{} die AWe vor dem Schalten $\vec{x}_A(t_S^-)$ eingezeichnet wurden statt der AWe nach dem Schalten $\vec{x}_A(t_S^+)$ (wie in Kap.8 des Skripts). Laut Kap.10 des Skripts berechnet die Laplace-Trafo durch diesen Unterschied die schnellen Ausgleichsvorgänge bei $t=t_S$ automatisch mit.
 %
 \anm Bei $t=t_S$ treten in $i_{L_1}^{(1)}(t)$ keine Dirac-Anteile auf, weil $u_{R_1}(t)$ bei $t=t_S$ stetig ist und deshalb beim Ableiten dort keine Dirac-Anteile liefert. Man kann auch $u_{R_1}(t)$ mit Hilfe von $\Theta$-Funktionen für alle Zeiten beschreiben und diese Darstellung ableiten -- dabei werden bei $t=t_S$ zwei Dirac-Anteile auftreten, die sich gegenseitig aufheben.
+%
+%
+\nsection{Aufgabe 2}%
+\nsubsection{Aufgabe 2a)}%
+%\incfigs{a2a}{NWM im Laplace-Bereich, $G_i:=\frac{1}{R_i}$}{a2a}%
+%
+\nsubsection{Aufgabe 2b), c)}%
+Das NWM besitzt drei Zusatzströme:
+\[%
+	i_{1}(t)\text{ ist Steuerstrom,}\qquad i_{r_{1,2}}(t)\text{ sind Ströme von idealen SPQen}%
+\]%
+%
+Stelle die Matrix für das modifizierte Knoten-$\uY$-Verfahren mit den Regeln aus dem Skript direkt auf:
+\[%
+	\LGSMat{cccc|ccc}{%
+		\us C_3&		-\us C_3&	0&		0&		1&						0&	0\\[2.5mm]%
+		-\us C_3&\us(C_2+C_3)&	0&		0&		0&						-1&	0\\[2.5mm]%
+		0&				0&		G_3&	0&		0&						0&	1\\[2.5mm]%
+		0&				0&		0&		G_2&	0&						1&	0\\[1.25mm]%
+\hline&&&&&&\\[-2.5mm]%
+		1&				0&		0&		0&		-\lr{(}{R_1+\frac{1}{\us C_1}}{)}&	0&	0\\[2.5mm]%
+		0&				-1&		0&		1&		0\red{-r_1}&				0&	0\\[2.5mm]%
+		0&				0&		1&		0&		0\red{-r_2}&				0&	0%
+	}{}\ubcom{=:\vec{\uX}(\us)}{\LGSMat{c}{%
+		\UPot_1\\[2.5mm]%
+		\UPot_2\\[2.5mm]%
+		\UPot_3\\[2.5mm]%
+		\UPot_4\\[2.5mm]%
+\hline\\[-2.5mm]%
+		\uI_1\\[2.5mm]%
+		\uI_{r_1}\\[2.5mm]%
+		\uI_{r_2}%
+	}{}(\us)}=\LGSMat{c}{%
+		-\uJ(\us)+C_3u_{C_3,0}\\[2.5mm]%
+		-C_3u_{C_3,0}+C_2u_{C_2,0}\\[2.5mm]%
+		\uJ(\us)\\[2.5mm]%
+		0\\[2.5mm]%
+	\hline\\[-2.5mm]%
+		\frac{u_{C,0}}{\us}\\[2.5mm]%
+		\red{\cancel{r_1\uI_1(\us)}}\\[2.5mm]%
+		\red{\cancel{r_2\uI_1(\us)}}%
+	}{}%
+\]%
+
 \input{\defaultPath ending}
