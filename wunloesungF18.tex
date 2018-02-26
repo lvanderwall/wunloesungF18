@@ -3,7 +3,8 @@
 %Notice: Place the "LaTeX-Def"-folder on the same harddisk as your LaTeX-files!
 %Be sure not to forget the slash at the beginning and the end of the path!
 %\newcommand{\defaultPath}{/Lennys_Docs/LaTeX_Def/}
-\newcommand{\defaultPath}{/docs/LaTeX_Def/}
+%\newcommand{\defaultPath}{/docs/LaTeX_Def/}
+\newcommand{\defaultPath}{/run/media/lvdw/DATA/docs/latex_def/}
 
 \input{\defaultPath packages}
 \input{\defaultPath commands}
@@ -350,4 +351,94 @@ Sei $t<t_S$.\marginpar{\fbox{$t<t_S$}} Das als asympt. stabil vorausgesetzte NWM
 \]%
 %
 \anm Die obige Darstellung für $u_{R_1}(t)$ gilt sogar für alle $t\im$.
+%
+%
+\nsubsection{Aufgabe 1g)}%
+Berechne zunächst $u_{R_1}(t)$ für alle Zeiten. Sei $t<t_S$.\marginpar{\fbox{$t<t_S$}} Das als asympt. stabil vorausgesetzte NWM existiert für alle Zeiten und befindet sich für $t<t_S$ im DC-EZ, da $v(t)=V_0,\: j(t)=J_0$:
+\incfigs{a1g_DC}{DC-ESB für $t<t_S$ mit $R_i=R$}{a1g_DC}%
+
+\noindent Berechne $u_{R_1}(t)$ und die AWe vor dem Schalten $\vec{x}_A(t_S^-)$ im DC-ESB per Superposition und einfachem Stromteiler in Impedanzen:
+\begin{align*}%
+	i_{L_1}(t)&=-\frac{V_0}{R_1+R_3}-\frac{R_3}{R_1+R_3}J_0\ucom{R_i=R}{=}-\frac{V_0+RJ_0}{2R}=:i_{L_1}(t_S^-),&i_{L_2}(t)&=-J_0=i_{L_2}(t_S^-),\\[2.5mm]%
+%
+	i_{L_3}(t)&=i_{L_1}(t)-i_{L_2}(t)=\frac{RJ_0-V_0}{2R}=i_{L_3}(t_S^-)&\arr\quad u_{R_1}(t)&=-R_1i_{L_1}(t)=\frac{V_0+RJ_0}{2}%
+\end{align*}%
+%
+\marginpar{\fbox{$t\geq t_S$}}Sei nun $t\geq t_S$. Es gibt AWe $\neq 0$, aber keine Wartebedingung gegenüber $t_S$, berechne deshalb $u_{R_1}(t)$ per allgemeinen NW-Analyse: $u_{R_1}(t)=u_{R_1,A}(t)+u_{R_1,Q}(t),\quad t\geq t_S$
+%
+\begin{itemize}%
+	\item $u_{R_1,A}(t)$ (Antwort nur auf AWe): Setze alle festen Quellen gleich $0$ und zeichne das NWM im Laplace-Bereich:
+%	\incfigs{a1g_Lapl}{Laplace-ESB für $t\geq t_S$ (Zeitverschiebung: $\tilde{t}(t):=t-t_S$) und $R_i=R,\:L_i=L$}{a1g_Lapl}%
+	%
+	\noindent Berechne $\tilde{\uI}_{L_1,A}(\us),\:\tilde{\uU}_{L_1,A}(\us)$  per Maschen-Z-Verfahren:
+	\begin{gather*}%
+		(\us L+R)\LGSMat{rr}{%
+			2&-1\\[2.5mm]%
+			-1&2%
+		}{}\LGSMat{c}{%
+			\tilde{\uI}_{L_1,A}\\[2.5mm]%
+			\tilde{\uI}_{L_2,A}%
+		}{}(\us)=L\LGSMat{c}{%
+			i_{L_1}(t_S^-)+i_{L_3}(t_S^-)\\[2.5mm]%
+			i_{L_2}(t_S^-)-i_{L_3}(t_S^-)%
+		}{}=\frac{L}{2R}\LGSMat{c}{%
+			-2V_0\\[2.5mm]%
+			V_0-3RJ_0%
+		}{}\\[2.5mm]%
+	%
+		\arr\quad\tilde{\uU}_{R_1,A}(\us)=-R\tilde{\uI}_{L_1,A}(\us)\utcom{Cramer}{=}\frac{%
+			-\cancel{R}L%
+		}{%
+			2\cancel{R}(\us L+R)%
+		}\cdot\frac{%
+			-4V_0+(V_0-3RJ_0)%
+		}{3}=\frac{%
+			\cancel{3L}(V_0+RJ_0)%
+		}{%
+			\cancel{6L}^2(\us+A)%
+		},\\[2.5mm]%
+	%
+		\multimapdotbothBvert\quad\Laplinv[\tilde{t}]{}\\[2.5mm]%
+	%
+		\tilde{u}_{R_1,A}(\tilde{t})=\frac{V_0+RJ_0}{2}\Theta(\tilde{t})e^{-A\tilde{t}},\quad\tilde{t}\geq0\quad\arr\quad u_{R_1,A}(t)=\tilde{u}_{R_1,A}(t-t_S),\quad t\geq t_S
+	\end{gather*}%
+%
+	\item $u_{R_1,Q}(t)$ (Antwort nur auf feste Quellen): Berechne $u_{R_1,Q}(t)$ per Faltung:
+	\[%
+		u_{R_1,Q}(t)=\lr{(}{%
+			\Theta(t'-t_S)v(t')*u_{R_1,\delta}(t')%
+		}{)}(t),\qquad v_Q(t):=\Theta(t-t_S)v(t)=V_0\Theta(t-t_S)%
+	\]%
+	%
+	Definiere die Hilfsfunktion $g_1(t)$ mit der ÜF aus A1e):
+	\begin{align*}%
+		\uG_1(\us)&:=\frac{1}{\us}\uH(\us)=\frac{2A}{3}\cdot\frac{1}{\us(\us+A)}\utcom{Zuhalte}{=}\frac{2}{3}\lr{(}{%
+			\frac{1}{\us}-\frac{1}{\us+A}%
+		}{)}\\[2.5mm]%
+	%
+		g_1(t)&:=\lr{(}{%
+			\Theta(t')*u_{R_1,\delta}(t')%
+		}{)}(t)=\frac{2}{3}\lr{(}{%
+			1-e^{-At}%
+		}{)}\\[2.5mm]%
+	%
+		\arr u_{R_1,Q}(t)&=V_0g_1(t-t_S),\qquad t\geq t_S%
+	\end{align*}%
+\end{itemize}%
+%
+Nun ist $u_{R_1}(t)$ für alle $t\im$ bekannt, berechne über die Ableitung im Bereich von Distributionen:
+\begin{align*}%
+	i_{L_1}^{(1)}(t)&=-i_{R_1}^{(1)}(t)=-\frac{1}{R_1}u_{R_1}^{(1)}(t)\utcom{\parbox{1.8cm}{\centering$u_{R_1}(t)$ stetig\\ in $t=t_S$}}{=}\frac{-1}{R_1}\case{%
+		t<t_S:&0\\[2.5mm]%
+		t\geq t_S:&\lr{(}{%
+			-A\frac{V_0+RJ_0}{2} -(-A) \frac{2V_0}{3}%
+		}{)}\Theta(t-t_S)e^{-A(t-t_S)}%	
+	}\\[2.5mm]%
+%
+	&=-A\frac{V_0-3RJ_0}{6R}\Theta(t-t_S)e^{-A(t-t_S)},\qquad t\im%
+\end{align*}%
+%
+\anm Nach dem Schalten wird $u_{R_1}(t)$ für $t\geq t_S$ berechnet (statt $t>t_S$), weil in \Fref{} die AWe vor dem Schalten $\vec{x}_A(t_S^-)$ eingezeichnet wurden statt der AWe nach dem Schalten $\vec{x}_A(t_S^+)$ (wie in Kap.8 des Skripts). Laut Kap.10 des Skripts berechnet die Laplace-Trafo durch diesen Unterschied die schnellen Ausgleichsvorgänge bei $t=t_S$ automatisch mit.
+%
+\anm Bei $t=t_S$ treten in $i_{L_1}^{(1)}(t)$ keine Dirac-Anteile auf, weil $u_{R_1}(t)$ bei $t=t_S$ stetig ist und deshalb beim Ableiten dort keine Dirac-Anteile liefert. Man kann auch $u_{R_1}(t)$ mit Hilfe von $\Theta$-Funktionen für alle Zeiten beschreiben und diese Darstellung ableiten -- dabei werden bei $t=t_S$ zwei Dirac-Anteile auftreten, die sich gegenseitig aufheben.
 \input{\defaultPath ending}
