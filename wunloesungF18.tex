@@ -482,5 +482,37 @@ Stelle die Matrix mit den Regeln aus dem Skript direkt auf. Verwende $\uZ_1(\us)
 		\red{\cancel{r_2\uI_1(\us)}}%
 	}{}%
 \]%
+%
+%
+\nsubsection{Aufgabe 2d)}%
+Betrachte die Antwort aus dem RZ$\quad\arr\quad$Setze alle AW-Quellen zu Null! Verschiebe $\uJ(\us)$ in $M_1$:
+%\incfigs{a2d}{Verschiebe $\uJ(\us)$ in $M_1$}{a2d}%
+%
+Stelle die (Rück-)Trafo- und Rückgewinnungsgleichungen auf:
+\begin{align*}%
+	\text{Trafo-Glg.:}&&\LGSMat{c}{%
+		\uI'_1\\[2.5mm]%
+		\uI'_{r_2}%
+	}{}(\us)&=\LGSMat{c}{%
+		\uI_1\\[2.5mm]%
+		\uI_{r_2}%
+	}{}(\us)+\uJ(\us)\LGSMat{c}{%
+		1\\[2.5mm]%
+		-1%
+	}{}(\us)\\[2.5mm]%
+%
+	\numberthis{a1d_Rueckg}\text{Rücktrafo-Glg.:}&& \LGSMat{c}{%
+		\uI_1\\[2.5mm]%
+		\uI_{r_2}%
+	}{}(\us)&=\LGSMat{c}{%
+		\uI'_1\\[2.5mm]%
+		\uI'_{r_2}%
+	}{}(\us)+\uJ(\us)\LGSMat{c}{%
+		-1\\[2.5mm]%
+		1%
+	}{}(\us)\\[2.5mm]%
+%
+	\text{Rückgewinngung:}&&\uI_J(\us)&=\uJ(\us),\qquad\uU_J(\us)=\uU_1(\us)-\uU_2(\us)
+\end{align*}%
 
 \input{\defaultPath ending}
