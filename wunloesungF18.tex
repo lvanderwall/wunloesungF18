@@ -541,5 +541,41 @@ Berücksichtige die Steuerung:
 \[%
 	\uI_1(\us)\utcom{\Eref{a1d_Rueckg}}{=}\uI'_1(\us)-\uJ(\us)\utcom{\Fref{}}{=}-\MStrom_3(\us)-\uJ(\us)%
 \]%
+%
+%
+\nsection{Aufgabe 3}%
+\nsubsection{Aufgabe 3a)}%
+%\incfigs{a3a}{DC-ESB, $I_G\approx 0$ bei MOS-Transistoren}{a3a}%
 
+\noindent Die Arbeitspunkte von $M_{1,2}$ lassen sich wegen \glqq$I_{D_2}=-I_{D_1}$ unbekannt\grqq\:nicht unabhängig voneinander berechnen. Bestimme für jeden Transistor zwei Kennlinien und versuche, sie ineinander einzusetzen:
+\begin{align*}%
+	T_1:&&AG_1:&&0&=U_{D_1S_1}-U_{G_1S_1}-R_1\cancel{I_{G_1}}^{\approx0}\quad\arr\quad U_{D_1S_1}=U_{G_1S_1},\qquad I_{D_2}\utcom{Hinweis}{=:}f(U_{G_1S_1})\\[2.5mm]%
+%
+	&&&&I_{D_1S_1}&=-I_{D_2S_2}\quad\arr\quad I_{D_2S_2}=-I_{D_1S_1}=-f(U_{G_1S_1})\\[5.0mm]%
+%
+	T_2:&&M_1:&&U_{G_2S_2}&\approx\frac{R_4}{R_3+R_4}V_{DD}=\frac{%
+		\SI{100}{\kilo\ohm}%
+	}{%
+		\SI{400}{\kilo\ohm}+\SI{100}{\kilo\ohm}%
+	}\cdot\SI{4}{V}=\SI{0.8}{\volt}\\[2.5mm]%
+	&&M_2:&&0&=-V_{DD}-U_{D_1S_1}+R_2I_{D_2S_2}+U_{D_2S_2}=-V_{DD}-U_{G_1S_1}-R_2f(U_{G_1S_1})+U_{D_2S_2}\\[2.5mm]%
+%
+	&&&&\arr\quad U_{D_2S_2}&=V_{DD}+U_{G_1S_2}+R_2f(U_{G_1S_1})\\[2.5mm]%
+\intertext{$AG_1$ und $M_2$ liefern die Kennlinie $AG_2$ abhängig von der nichtlinearen Beziehung $f(U_{G_1S_1})$ (Hinweis!):}%
+	\numberthis{a3a_AG2}&&AG_2:&&\LGSMat{c}{%
+		U_{D_2S_2}\\[2.5mm]%
+		I_{D_2}%
+	}{}&=\LGSMat{c}{%
+		-f(U_{G_1S_1})\\[2.5mm]%
+		V_{DD}+U_{G_1S_1}+R_2f(U_{G_1S_1})%
+	}{}=\LGSMat{c}{%
+		\SI{4}{\volt}+U_{G_1S_1}+\SI{2}{\kilo\ohm}f(U_{G_1S_1})\\[2.5mm]%
+		-f(U_{G_1S_1})%
+	}{}%
+\end{align*}%
+%
+Für alle Werte von $U_{G_1S_1}$ aus dem ersten Kennlinienfeld liefert die Kennlinie $AG_1$ in \Fref{} die zugehörigen Werte $I_{D_1S_1}$, trage sie in \Tref{a3a_kennlinie} ein. Mit Hilfe von \Eref{a3a_AG2} berechne einige Punkte von $AG_2$:
+\tabs{a3a}{Wertetabelle für die Kennlinie $AG_2$}{a3a_kennlinie}%
+
+\noindent Zeichne die letzten drei Punkte aus \Tref{a3a_kennlinie} in das zweite Kennlinienfeld \Fref{} ein und verbinde sie zur Ausgleichskurve $AG_2$. Der Schnittpunkt mit der Kennlinie $U_{G_2S_2}=0.8V$ liefert den Arbeitspunkt $AP_2$. Im ersten Kennlinienfeld \Fref{} ergibt der Schnittpunkt von $AG_1$ und der Geraden $I_{D_1}=-I_{D_2}\approx$ den Arbeitspunkt $AP_1$:
 \input{\defaultPath ending}
