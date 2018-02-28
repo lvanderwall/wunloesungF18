@@ -514,5 +514,32 @@ Stelle die (Rück-)Trafo- und Rückgewinnungsgleichungen auf:
 %
 	\text{Rückgewinngung:}&&\uI_J(\us)&=\uJ(\us),\qquad\uU_J(\us)=\uU_1(\us)-\uU_2(\us)
 \end{align*}%
+%
+%
+\nsubsection{Aufgabe 2e)}%
+Zeichne den Graphen des transformierten NWMs:
+%\incfigs{a2e}{Graph des transformierten NWMs}{a2e}
+%
+Stelle die Matrix mit den Regeln aus dem Skript direkt auf:
+\[%
+	\ubcom{=:\MMat(\us)}{\LGSMat{ccc}{%
+		R_3&	0&								0\red{-r_2}\\[2.5mm]%
+		0&		\uZ_1(\us)+R_2+\frac{1}{\us C_2}&	-R_2\red{-r_1}\\[2.5mm]%
+		0&		-R_2&							R_2+\frac{1}{\us C_2}\red{+r_1}%
+	}{}}\LGSMat{c}{%
+		\MStrom_1\\[2.5mm]%
+		\MStrom_2\\[2.5mm]%
+		\MStrom_3%
+	}{}(\us)=\ubcom{=:\MVec_0(\us)}{\LGSMat{c}{%
+		\red{\cancel{-r_2\uI_1(\us)}+r_2\uJ(\us)}\\[2.5mm]%
+		\red{\cancel{-r_1\uI_1(\us)}}-\frac{u_{out,0}}{\us}\red{+r_1\uJ(\us)}\\[2.5mm]%
+		\frac{u_{C_1,0}}{\us}-\uZ_1(\us)\uJ(\us)-\frac{u_{C_3,0}}{\us}+\red{\cancel{r_1\uI_1(\us)}}\red{-r_1\uJ(\us)}%
+	}{}}%
+\]%
+%
+Berücksichtige die Steuerung:
+\[%
+	\uI_1(\us)\utcom{\Eref{a1d_Rueckg}}{=}\uI'_1(\us)-\uJ(\us)\utcom{\Fref{}}{=}-\MStrom_3(\us)-\uJ(\us)%
+\]%
 
 \input{\defaultPath ending}
