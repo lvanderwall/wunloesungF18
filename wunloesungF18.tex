@@ -367,9 +367,9 @@ Berechne zunächst $u_{R_1}(t)$ für alle Zeiten. Sei $t<t_S$.\marginpar{\fbox{$
 \marginpar{\fbox{$t\geq t_S$}}Sei nun $t\geq t_S$. Es gibt AWe $\neq 0$, aber keine Wartebedingung gegenüber $t_S$, berechne deshalb $u_{R_1}(t)$ per allgemeinen NW-Analyse: $u_{R_1}(t)=u_{R_1,A}(t)+u_{R_1,Q}(t),\quad t\geq t_S$
 %
 \begin{itemize}%
-	\item $u_{R_1,A}(t)$ (Antwort nur auf AWe): Setze alle festen Quellen gleich $0$ und zeichne das NWM im Laplace-Bereich:
-%	\incfigs{a1g_Lapl}{Laplace-ESB für $t\geq t_S$ (Zeitverschiebung: $\tilde{t}(t):=t-t_S$) und $R_i=R,\:L_i=L$}{a1g_Lapl}%
-	%
+	\item $u_{R_1,A}(t)$ (Antwort nur auf AWe): Setze alle festen Quellen $=0$ und zeichne das Laplace-ESB:
+	\incfigs{a1g_Lapl}{Laplace-ESB für $t\geq t_S$ mit $R_i=R,\:L_i=L$ $t\geq t_S$ (Zeitverschiebung: $\tilde{t}(t):=t-t_S$) und }{a1g_Lapl}%
+	
 	\noindent Berechne $\tilde{\uI}_{L_1,A}(\us),\:\tilde{\uU}_{L_1,A}(\us)$  per Maschen-Z-Verfahren:
 	\begin{gather*}%
 		(\us L+R)\LGSMat{rr}{%
@@ -414,15 +414,13 @@ Berechne zunächst $u_{R_1}(t)$ für alle Zeiten. Sei $t<t_S$.\marginpar{\fbox{$
 	\begin{align*}%
 		\uG_1(\us)&:=\frac{1}{\us}\uH(\us)=\frac{2A}{3}\cdot\frac{1}{\us(\us+A)}\utcom{Zuhalte}{=}\frac{2}{3}\lr{(}{%
 			\frac{1}{\us}-\frac{1}{\us+A}%
-		}{)}\\[2.5mm]%
+		}{)}&&\\[2.5mm]%
 	%
 		g_1(t)&:=\lr{(}{%
 			\Theta(t')*u_{R_1,\delta}(t')%
 		}{)}(t)=\frac{2}{3}\lr{(}{%
 			1-e^{-At}%
-		}{)}\\[2.5mm]%
-	%
-		\arr u_{R_1,Q}(t)&=V_0g_1(t-t_S),\qquad t\geq t_S%
+		}{)}&\arr u_{R_1,Q}(t)&=V_0g_1(t-t_S),\qquad t\geq t_S%
 	\end{align*}%
 \end{itemize}%
 %
@@ -438,7 +436,7 @@ Nun ist $u_{R_1}(t)$ für alle $t\im$ bekannt, berechne über die Ableitung im B
 	&=-A\frac{V_0-3RJ_0}{6R}\Theta(t-t_S)e^{-A(t-t_S)},\qquad t\im%
 \end{align*}%
 %
-\anm Nach dem Schalten wird $u_{R_1}(t)$ für $t\geq t_S$ berechnet (statt $t>t_S$), weil in \Fref{} die AWe vor dem Schalten $\vec{x}_A(t_S^-)$ eingezeichnet wurden statt der AWe nach dem Schalten $\vec{x}_A(t_S^+)$ (wie in Kap.8 des Skripts). Laut Kap.10 des Skripts berechnet die Laplace-Trafo durch diesen Unterschied die schnellen Ausgleichsvorgänge bei $t=t_S$ automatisch mit.
+\anm Nach dem Schalten wird $u_{R_1}(t)$ für $t\geq t_S$ berechnet (statt für $t>t_S$ laut Kap.8 des Skripts), weil in \Fref{} die AWe \textit{vor} dem Schalten $\vec{x}_A(t_S^-)$ eingezeichnet wurden statt der AWe nach dem Schalten $\vec{x}_A(t_S^+)$, wie in Kap.8. Laut Kap.10 des Skripts berechnet die Laplace-Trafo durch diesen Unterschied die schnellen Ausgleichsvorgänge bei $t=t_S$ automatisch mit.
 %
 \anm Bei $t=t_S$ treten in $i_{L_1}^{(1)}(t)$ keine Dirac-Anteile auf, weil $u_{R_1}(t)$ bei $t=t_S$ stetig ist und deshalb beim Ableiten dort keine Dirac-Anteile liefert. Man kann auch $u_{R_1}(t)$ mit Hilfe von $\Theta$-Funktionen für alle Zeiten beschreiben und diese Darstellung ableiten -- dabei werden bei $t=t_S$ zwei Dirac-Anteile auftreten, die sich gegenseitig aufheben.
 %
@@ -465,13 +463,13 @@ Stelle die Matrix mit den Regeln aus dem Skript direkt auf. Verwende $\uZ_1(\us)
 		0&				-1&		0&		1&		0\red{-r_1}&		0&	0\\[2.5mm]%
 		0&				0&		1&		0&		0\red{-r_2}&		0&	0%
 	}{}\ubcom{=:\vec{\uX}(\us)}{\LGSMat{c}{%
-		\UPot_1\\[2.5mm]%
-		\UPot_2\\[2.5mm]%
-		\UPot_3\\[2.5mm]%
-		\UPot_4\\[2.5mm]%
-\hline\\[-2.5mm]%
-		\uI_1\\[2.5mm]%
-		\uI_{r_1}\\[2.5mm]%
+		\UPot_1\\[1mm]%
+		\UPot_2\\[1mm]%
+		\UPot_3\\[1mm]%
+		\UPot_4\\[1mm]%
+\hline\\[-3.5mm]%
+		\uI_1\\[1mm]%
+		\uI_{r_1}\\[1mm]%
 		\uI_{r_2}%
 	}{}(\us)}=\LGSMat{c}{%
 		-\uJ(\us)+C_3u_{C_3,0}\\[2.5mm]%
