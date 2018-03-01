@@ -414,17 +414,17 @@ Berechne zunächst $u_{R_1}(t)$ für alle Zeiten. Sei $t<t_S$.\marginpar{\fbox{$
 	\begin{align*}%
 		\uG_1(\us)&:=\frac{1}{\us}\uH(\us)=\frac{2A}{3}\cdot\frac{1}{\us(\us+A)}\utcom{Zuhalte}{=}\frac{2}{3}\lr{(}{%
 			\frac{1}{\us}-\frac{1}{\us+A}%
-		}{)}&&\\[2.5mm]%
+		}{)}\\[2.5mm]%
 	%
 		g_1(t)&:=\lr{(}{%
 			\Theta(t')*u_{R_1,\delta}(t')%
 		}{)}(t)=\frac{2}{3}\lr{(}{%
 			1-e^{-At}%
-		}{)}&\arr u_{R_1,Q}(t)&=V_0g_1(t-t_S),\qquad t\geq t_S%
+		}{)}\quad\arr\quad u_{R_1,Q}(t)=V_0g_1(t-t_S),\qquad t\geq t_S%
 	\end{align*}%
 \end{itemize}%
 %
-Nun ist $u_{R_1}(t)$ für alle $t\im$ bekannt, berechne über die Ableitung im Bereich von Distributionen:
+Nun ist $u_{R_1}(t)$ für alle $t\im$ bekannt, berechne $i_{L_1}^{(1)}(t)$ über die Ableitung im Bereich von Distributionen:
 \begin{align*}%
 	i_{L_1}^{(1)}(t)&=-i_{R_1}^{(1)}(t)=-\frac{1}{R_1}u_{R_1}^{(1)}(t)\utcom{\parbox{1.8cm}{\centering$u_{R_1}(t)$ stetig\\ in $t=t_S$}}{=}\frac{-1}{R_1}\case{%
 		t<t_S:&0\\[2.5mm]%
@@ -433,10 +433,10 @@ Nun ist $u_{R_1}(t)$ für alle $t\im$ bekannt, berechne über die Ableitung im B
 		}{)}\Theta(t-t_S)e^{-A(t-t_S)}%	
 	}\\[2.5mm]%
 %
-	&=-A\frac{V_0-3RJ_0}{6R}\Theta(t-t_S)e^{-A(t-t_S)},\qquad t\im%
+	&=-A\frac{V_0-3RJ_0}{6R}\Theta(t-t_S)e^{-A(t-t_S)}\ucom{A=\frac{R}{L}}{=}-\frac{V_0-3RJ_0}{6L}\Theta(t-t_S)e^{-A(t-t_S)},\qquad t\im%
 \end{align*}%
 %
-\anm Nach dem Schalten wird $u_{R_1}(t)$ für $t\geq t_S$ berechnet (statt für $t>t_S$ laut Kap.8 des Skripts), weil in \Fref{} die AWe \textit{vor} dem Schalten $\vec{x}_A(t_S^-)$ eingezeichnet wurden statt der AWe nach dem Schalten $\vec{x}_A(t_S^+)$, wie in Kap.8. Laut Kap.10 des Skripts berechnet die Laplace-Trafo durch diesen Unterschied die schnellen Ausgleichsvorgänge bei $t=t_S$ automatisch mit.
+\anm Nach dem Schalten wird $u_{R_1}(t)$ für $t\geq t_S$ berechnet (statt für $t>t_S$ laut Kap.8 des Skripts), weil in \Fref{a1g_Lapl} die AWe \textit{vor} dem Schalten $\vec{x}_A(t_S^-)$ eingezeichnet wurden statt der AWe nach dem Schalten $\vec{x}_A(t_S^+)$, wie in Kap.8. Laut Kap.10 des Skripts berechnet die Laplace-Trafo durch diesen Unterschied die schnellen Ausgleichsvorgänge bei $t=t_S$ automatisch mit.
 %
 \anm Bei $t=t_S$ treten in $i_{L_1}^{(1)}(t)$ keine Dirac-Anteile auf, weil $u_{R_1}(t)$ bei $t=t_S$ stetig ist und deshalb beim Ableiten dort keine Dirac-Anteile liefert. Man kann auch $u_{R_1}(t)$ mit Hilfe von $\Theta$-Funktionen für alle Zeiten beschreiben und diese Darstellung ableiten -- dabei werden bei $t=t_S$ zwei Dirac-Anteile auftreten, die sich gegenseitig aufheben.
 %
