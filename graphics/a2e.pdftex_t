@@ -1,0 +1,51 @@
+\begin{picture}(0,0)%
+\includegraphics{a2e.pdf}%
+\end{picture}%
+%
+%  Created by WinFIG version 7.2 
+%  METADATA <version>1.0</version> 
+%  export 60% 
+%
+\setlength{\unitlength}{2368sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(1932,3475)(3167,-5687)
+%  METADATA <id>30</id> 
+\put(4017,-3706){\makebox(0,0)[b]{\smash{{\SetFigFont{6}{7.2}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}4}%
+}}}}
+%  METADATA <id>36</id> 
+\put(4254,-2766){\makebox(0,0)[b]{\smash{{\SetFigFont{6}{7.2}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}2}%
+}}}}
+%  METADATA <id>42</id> 
+\put(3779,-4654){\makebox(0,0)[b]{\smash{{\SetFigFont{6}{7.2}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}B}%
+}}}}
+%  METADATA <id>45</id> 
+\put(4251,-5598){\makebox(0,0)[b]{\smash{{\SetFigFont{6}{7.2}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}3}%
+}}}}
+%  METADATA <id>50</id> 
+\put(3311,-2998){\makebox(0,0)[b]{\smash{{\SetFigFont{6}{7.2}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}1}%
+}}}}
+%  METADATA <id>23</id> 
+\put(4601,-4912){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\MStrom_1(\us)=\uI_{r_2}(\us)$}%
+}}}}
+%  METADATA <id>22</id> 
+\put(5084,-3645){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\MStrom_2(\us)=\uI_{C_2}(\us)$}%
+}}}}
+%  METADATA <id>21</id> 
+\put(3899,-2350){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\MStrom_3(\us)=\uI_{C_3}(\us)$}%
+}}}}
+%  METADATA <id>51</id> 
+\put(3426,-3413){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,.56,0}$FM_3$}%
+}}}}
+%  METADATA <id>53</id> 
+\put(5080,-4122){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,.56,0}$FM_2$}%
+}}}}
+%  METADATA <id>54</id> 
+\put(4607,-5303){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,.56,0}$FM_1$}%
+}}}}
+\end{picture}%

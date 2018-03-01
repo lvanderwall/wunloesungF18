@@ -1,0 +1,87 @@
+\begin{picture}(0,0)%
+\includegraphics{a2d.pdf}%
+\end{picture}%
+%
+%  Created by WinFIG version 7.2 
+%  METADATA <version>1.0</version> 
+%  export 60% 
+%
+\setlength{\unitlength}{2368sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(8417,5320)(1169,-5519)
+%  METADATA <id>318</id> 
+\put(9219,-4767){\makebox(0,0)[b]{\smash{{\SetFigFont{6}{7.2}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}B}%
+}}}}
+%  METADATA <id>315</id> 
+\put(6618,-4888){\makebox(0,0)[b]{\smash{{\SetFigFont{6}{7.2}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}3}%
+}}}}
+%  METADATA <id>321</id> 
+\put(8982,-400){\makebox(0,0)[b]{\smash{{\SetFigFont{6}{7.2}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}1}%
+}}}}
+%  METADATA <id>165</id> 
+\put(3781,-2526){\makebox(0,0)[b]{\smash{{\SetFigFont{6}{7.2}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}1}%
+}}}}
+%  METADATA <id>162</id> 
+\put(4018,-4767){\makebox(0,0)[b]{\smash{{\SetFigFont{6}{7.2}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}B}%
+}}}}
+%  METADATA <id>156</id> 
+\put(1418,-4888){\makebox(0,0)[b]{\smash{{\SetFigFont{6}{7.2}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}3}%
+}}}}
+%  METADATA <id>140</id> 
+\put(1184,-3823){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uJ(\us)$}%
+}}}}
+%  METADATA <id>143</id> 
+\put(2247,-3823){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uU_J(\us)$}%
+}}}}
+%  METADATA <id>145</id> 
+\put(1775,-3115){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uI_J(\us)$}%
+}}}}
+%  METADATA <id>127</id> 
+\put(3305,-5103){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uI_{r_2}(\us)$}%
+}}}}
+%  METADATA <id>250</id> 
+\put(9571,-2763){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uU_1(\us)$}%
+}}}}
+%  METADATA <id>251</id> 
+\put(8629,-1701){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uZ_1(\us)$}%
+}}}}
+%  METADATA <id>252</id> 
+\put(9102,-993){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uI'_1(\us)$}%
+}}}}
+%  METADATA <id>264</id> 
+\put(8511,-3822){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uZ_1(\us)\uJ(\us)$}%
+}}}}
+%  METADATA <id>94</id> 
+\put(2718,-4240){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uU_{r_2}(\us)$}%
+}}}}
+%  METADATA <id>78</id> 
+\put(2721,-5457){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$r_2\uI_1(\us)$}%
+}}}}
+%  METADATA <id>277</id> 
+\put(7921,-5457){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$r_2\uI_1(\us)$}%
+}}}}
+%  METADATA <id>287</id> 
+\put(7918,-4240){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uU_{r_2}(\us)$}%
+}}}}
+%  METADATA <id>288</id> 
+\put(8505,-5103){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uI'_{r_2}(\us)$}%
+}}}}
+%  METADATA <id>332</id> 
+\put(4137,-3827){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uU_1(\us)$}%
+}}}}
+%  METADATA <id>333</id> 
+\put(3548,-3473){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uZ_1(\us)$}%
+}}}}
+%  METADATA <id>335</id> 
+\put(3901,-3119){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uI_1(\us)$}%
+}}}}
+%  METADATA <id>325</id> 
+\put(6615,-2975){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}ESPQ-DST}%
+}}}}
+\end{picture}%

@@ -443,15 +443,15 @@ Nun ist $u_{R_1}(t)$ für alle $t\im$ bekannt, berechne über die Ableitung im B
 %
 \nsection{Aufgabe 2}%
 \nsubsection{Aufgabe 2a)}%
-%\incfigs{a2a}{NWM im Laplace-Bereich, $G_i:=\frac{1}{R_i}$}{a2a}%
+\incfigs{a2a}{NWM im Laplace-Bereich}{a2a}%
 %
 \nsubsection{Aufgabe 2b), c)}%
-Das NWM besitzt drei Zusatzströme:
+Das NWM in \Fref{a2a} besitzt drei Zusatzströme für das modifizierte Knoten-$\uY$-Verfahren:
 \[%
-	i_{1}(t)\text{ ist Steuerstrom,}\qquad i_{r_{1,2}}(t)\text{ sind Ströme von idealen SPQen}%
+	\uI_1(\us)\text{ ist Steuerstrom,}\qquad \uI_{r_{1,2}}(\us)\text{ sind Ströme von idealen SPQen}%
 \]%
 %
-Stelle die Matrix mit den Regeln aus dem Skript direkt auf. Verwende $\uZ_1(\us):=R_1+\frac{1}{\us C_1}$:
+Stelle die Matrix mit den Regeln aus dem Skript direkt auf. Verwende $\uZ_1(\us):=R_1+\frac{1}{\us C_1},\: G_i:=\frac{1}{R_i}$:
 \[%
 	\LGSMat{cccc|ccc}{%
 		\us C_3&		-\us C_3&	0&		0&		1&				0&	0\\[2.5mm]%
@@ -477,7 +477,7 @@ Stelle die Matrix mit den Regeln aus dem Skript direkt auf. Verwende $\uZ_1(\us)
 		\uJ(\us)\\[2.5mm]%
 		0\\[2.5mm]%
 	\hline\\[-2.5mm]%
-		\frac{u_{C,0}}{\us}\\[2.5mm]%
+		\frac{u_{C_1,0}}{\us}\\[2.5mm]%
 		\red{\cancel{r_1\uI_1(\us)}}\\[2.5mm]%
 		\red{\cancel{r_2\uI_1(\us)}}%
 	}{}%
@@ -486,9 +486,9 @@ Stelle die Matrix mit den Regeln aus dem Skript direkt auf. Verwende $\uZ_1(\us)
 %
 \nsubsection{Aufgabe 2d)}%
 Betrachte die Antwort aus dem RZ$\quad\arr\quad$Setze alle AW-Quellen zu Null! Verschiebe $\uJ(\us)$ in $M_1$:
-%\incfigs{a2d}{Verschiebe $\uJ(\us)$ in $M_1$}{a2d}%
-%
-Stelle die (Rück-)Trafo- und Rückgewinnungsgleichungen auf:
+\incfigs{a2d}{Verschiebe $\uJ(\us)$ in $M_1$}{a2d}%
+
+\noindent Stelle die (Rück-)Trafo- und Rückgewinnungsgleichungen auf:
 \begin{align*}%
 	\text{Trafo-Glg.:}&&\LGSMat{c}{%
 		\uI'_1\\[2.5mm]%
@@ -496,7 +496,7 @@ Stelle die (Rück-)Trafo- und Rückgewinnungsgleichungen auf:
 	}{}(\us)&=\LGSMat{c}{%
 		\uI_1\\[2.5mm]%
 		\uI_{r_2}%
-	}{}(\us)+\uJ(\us)\LGSMat{c}{%
+	}{}(\us)+\uJ(\us)\LGSMat{r}{%
 		1\\[2.5mm]%
 		-1%
 	}{}(\us)\\[2.5mm]%
@@ -507,20 +507,20 @@ Stelle die (Rück-)Trafo- und Rückgewinnungsgleichungen auf:
 	}{}(\us)&=\LGSMat{c}{%
 		\uI'_1\\[2.5mm]%
 		\uI'_{r_2}%
-	}{}(\us)+\uJ(\us)\LGSMat{c}{%
+	}{}(\us)+\uJ(\us)\LGSMat{r}{%
 		-1\\[2.5mm]%
 		1%
 	}{}(\us)\\[2.5mm]%
 %
-	\text{Rückgewinngung:}&&\uI_J(\us)&=\uJ(\us),\qquad\uU_J(\us)=\uU_1(\us)-\uU_2(\us)
+	\text{Rückgewinngung:}&&\uI_J(\us)&=\uJ(\us),\qquad\uU_J(\us)=\uU_1(\us)-\uU_{r_2}(\us)
 \end{align*}%
 %
 %
-\nsubsection{Aufgabe 2e)}%
-Zeichne den Graphen des transformierten NWMs:
-%\incfigs{a2e}{Graph des transformierten NWMs}{a2e}
-%
-Stelle die Matrix mit den Regeln aus dem Skript direkt auf:
+\clearpage\nsubsection{Aufgabe 2e)}%
+Zeichne den Graph des transformierten NWMs:
+\incfigs{a2e}{Graph des transformierten NWMs}{a2e}%
+
+\noindent Stelle die Matrix mit den Regeln aus dem Skript direkt auf:
 \[%
 	\ubcom{=:\MMat(\us)}{\LGSMat{ccc}{%
 		R_3&	0&								0\red{-r_2}\\[2.5mm]%
@@ -539,7 +539,7 @@ Stelle die Matrix mit den Regeln aus dem Skript direkt auf:
 %
 Berücksichtige die Steuerung:
 \[%
-	\uI_1(\us)\utcom{\Eref{a1d_Rueckg}}{=}\uI'_1(\us)-\uJ(\us)\utcom{\Fref{}}{=}-\MStrom_3(\us)-\uJ(\us)%
+	\uI_1(\us)\utcom{\Eref{a1d_Rueckg}}{=}\uI'_1(\us)-\uJ(\us)\utcom{\Fref{a2e}}{=}-\MStrom_3(\us)-\uJ(\us)%
 \]%
 %
 %
