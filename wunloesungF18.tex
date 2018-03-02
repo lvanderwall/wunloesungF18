@@ -699,4 +699,61 @@ Berechne den FG:
 		\jw(L_1+(1+gr_0)L_2)+r_0+R_3+R_T%
 	}%
 \]%
+%
+%
+\nsection{Aufgabe 4}%
+Substituiere die Eingänge der Z-Parameter-DST $i_1(t),\:i_2(t)$ durch feste STQen, nach Aufgabe darf vorausgesetzt werden, dass das NWM nach Substitution eindeutig lösbar ist. Wandle $v(t),\: R_1$ in eine ESTQ um und fasse $R_1,\:C_1$ sowie $R_3,\:C_3$ zusammen, da ihre Teilgrößen weder berechnet werden sollen noch etwas steuern. $R_0$ liegt in Reihe zur STQ $\uI_1$ und kann weggelassen, die Rückgewinnung von $\uU_1$ steht in \Fref{a4}. Verwende $\uY_i=\jw C_i+\frac{1}{R_i},\quad G_i:=\frac{1}{R_i}$:
+\incfigs{a4}{%
+	Vereinfachtes ESB im Bereich der KWSR nach Subst. von $\uI_{1,2},\quad \uU_1=R_0\uI_1+\UPot_1$%
+}{a4}%
+
+\noindent Die Steuerungspannung $u(t)$ kann \textit{nicht} direkt nur durch feste Quellen berechnet werden -- berechne deshalb die Ausgänge $\uU_1,\:\uU_2$ der Z-Parameter-DST mit dem Knoten-$\uY$-Verfahren! Wandle $v(t),\: R_1$ in eine ESTQ um und stelle die Matrix mit den Regeln aus dem Skript direkt auf:
+\begin{multline*}%
+	\PotMat\overset{\bullet}{\vec{\uU}}:=\LGSMat{ccc}{%
+		\jw C_2+\uY_1&-\uY_1&-\jw C_2\\[2.5mm]%
+%
+		-\uY_1\red{+g}&\uY_1+G_2+G_4&-G_2\red{-g}\\[2.5mm]%
+%
+		-\jw C_2\red{-g}&-G_2&\jw C_2+G_2+\uY_3\red{+g}%
+	}{}\LGSMat{c}{%
+		\UPot_1\\%
+		\UPot_2\\%
+		\UPot_3%
+	}{}=\\[2.5mm]%
+%
+	=\LGSMat{c}{%
+		\uI_1-G_1\uV\\[2.5mm]%
+		\uI_2+G_1\uV\cancel{-g\uU}\\[2.5mm]%
+		\cancel{g\uU}%
+	}{}=:\PotVec,\qquad\text{Berücksichtige die Steuerung: }\uU=\UPot_1-\UPot_3%
+\end{multline*}%
+%
+Berechne die Z-Parameter-DST mit der Cramer'schen Regel:
+\begin{multline*}%
+	\LGSMat{c}{%
+		\uU_1\\[2.5mm]%
+		\uU_2%
+	}{}\utcom{\Fref{a4}}{=}\LGSMat{c}{%
+		R_0\uI_1+\UPot_1\\[2.5mm]%
+		\UPot_2%
+	}{}\utcom{Cramer}{=}\LGSMat{c}{%
+		R_0\uI_1\\[2.5mm]%
+		0%
+	}{}+\frac{1}{\det[\PotMat]}\LGSMat{c}{%
+		\det[\PotMat_1^*]\\[2.5mm]%
+		\det[\PotMat_2^*]%
+	}{}\\[2.5mm]%
+%
+	\utcom{Koeff.-Vgl.}{\overset{!}{=}}\LGSMat{cc}{%
+		\uZ_{11}&\uZ_{12}\\[2.5mm]%
+		\uZ_{21}&\uZ_{22}%
+	}{}\LGSMat{c}{%
+		\uI_1\\[2.5mm]%
+		\uI_2%
+	}{}+\LGSMat{c}{%
+		\uV_{Z,1}\\[2.5mm]%
+		\uV_{Z,2}%
+	}{},\qquad\PotMat_i^*=\text{\glqq$\PotMat$, substituiere Spalte $i$ durch $\PotVec$\grqq}%
+\end{multline*}%
+\anm Fasst man die Zweige mit $i_2(t),\:R_4$ und $R_1,\:C_1,\:v(t)$ in je eine ESPQ  um und verschiebt $i_1(t)$ in einer Masche, liefert das Maschen-$\uZ$-Verfahren eine kleinere Matrix und wäre eigentlich die bessere Wahl; insbesondere, weil die Rücktrafo/Rückgewinnung in dieser Aufgabe nicht benötigt wird. Da in der Lösung aber die Determinanten-Funktion verwendet werden darf, spielt die Größe der Matrix in dieser Aufgabe keine Rolle\ldots
 \input{\defaultPath ending}
