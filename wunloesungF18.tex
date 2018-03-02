@@ -644,4 +644,59 @@ Lies die Kleinsignalparameter aus den Kennlinienfeldern \Fref{a3a_kennlinienfeld
 		\si{\volt}%
 	}=\SI{1.4}{\milli\siemens}&&%
 \end{align*}%
+%
+%
+\nsubsection{Aufgabe 3c)}%
+Zeichne das KS-ESB, setze alle DC-Quellen gleich Null und ersetze die Transistoren durch ihre KS-ESBs. Dabei fallen $G_1,\:D_1$ zusammen: $R_1$ wird kurzgeschlossen und kann weggelassen werden:
+\incfigs{a3c}{KS-ESB, alle Zweiggrößen sind KS-Größen}{a3c}%
+%
+%
+\nsubsection{Aufgabe 3d)}%
+Fasse $R_3,\:R_4,\:C,\: L_3$ zur Impedanz $\uZ$ zusammen, da ihre Teilströme/-spannungen weder berechnet werden sollen noch etwas steuern:
+\begin{align*}%
+	\uZ&:=(\jw L_3+R_3)\|R_4\|\frac{1}{\jw C}=\frac{1}{%
+		\jw C+\frac{1}{R_4}+\frac{1}{\jw L_3+R_3}%
+	}\ceqn{%
+		\cdot\frac{%
+			R_4(\jw L_3+R_3)%
+		}{%
+			R_4(\jw L_3+R_3)%
+		}%
+	}\\[2.5mm]%
+%
+	&=\frac{%
+		R_4(\jw L_3+R_3)%
+	}{%
+		(\jw R_4C+1)(\jw L_3+R_3)+R_4%
+	}=\frac{%
+		R_4(\jw L_3+R_3)%
+	}{%
+		(\jw)^2R_4CL_3+\jw(R_3R_4C+L_3)+R_3+R_4%
+	}%
+\end{align*}%
+%
+Stelle die Matrix für das Maschen-$\uZ$-Verfahrens im rechten Teilnetz auf. 
+\eqn{\label{a3d_MaschenZ}%
+	\LGSMat{c}{%
+		\jw(L_1+(1\red{+gr_0})L_2)+r_0+R_3+R_T%
+	}{}\LGSMat{c}{\uI_{D_2}}{}=\LGSMat{c}{%
+		\cancel{gr_0\uU_{G_2S_2}}\red{+gr_0\uZ\uJ}%
+	}{}%
+}%
+%
+Berücksichtige die Steuerung:
+\[%
+	\uU_{G_2S_2}=\uZ\uJ-\jw L_2\uI_{D_2}%
+\]%
+%
+Berechne den FG:
+\[%
+	\uH(\jw)=\frac{\uU_{out}}{\uJ}=-(\jw L_1+R_T)\frac{\uI_{D_2}}{\uJ}\ucom{%
+		\Eref{a3d_MaschenZ}%
+	}{=}-\frac{%
+		gr_0\uZ(\jw L_1+R_T)%
+	}{%
+		\jw(L_1+(1+gr_0)L_2)+r_0+R_3+R_T%
+	}%
+\]%
 \input{\defaultPath ending}
