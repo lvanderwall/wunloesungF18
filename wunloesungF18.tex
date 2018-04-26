@@ -696,7 +696,7 @@ Fasse $R_3,\:R_4,\:C,\: L_3$ zur Impedanz $\uZ$ zusammen, da ihre Teilströme/-s
 Stelle die Matrix für das Maschen-$\uZ$-Verfahrens im rechten Teilnetz auf. 
 \eqn{\label{a3d_MaschenZ}%
 	\LGSMat{c}{%
-		\jw(L_1+(1\red{+gr_0})L_2)+r_0+R_3+R_T%
+		\jw(L_1+(1\red{+gr_0})L_2)+r_0+R_2+R_T%
 	}{}\LGSMat{c}{\uI_{D_2}}{}=\LGSMat{c}{%
 		\cancel{gr_0\uU_{G_2S_2}}\red{+gr_0\uZ\uJ}%
 	}{}%
@@ -709,12 +709,12 @@ Berücksichtige die Steuerung:
 %
 Berechne den FG:
 \[%
-	\uH(\jw)=\frac{\uU_{out}}{\uJ}=-(\jw L_1+R_T)\frac{\uI_{D_2}}{\uJ}\ucom{%
+	\uH(\jw)=\frac{\uU_{out}}{\uJ}=-(\jw L_1+R_T)\frac{\uI_{D_2}}{\uJ}\utcom{%
 		\Eref{a3d_MaschenZ}%
 	}{=}-\frac{%
 		gr_0\uZ(\jw L_1+R_T)%
 	}{%
-		\jw(L_1+(1+gr_0)L_2)+r_0+R_3+R_T%
+		\jw(L_1+(1+gr_0)L_2)+r_0+R_2+R_T%
 	}%
 \]%
 %
