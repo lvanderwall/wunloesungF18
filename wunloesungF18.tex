@@ -368,9 +368,9 @@ Berechne zunächst $u_{R_1}(t)$ für alle Zeiten. Sei $t<t_S$.\marginpar{\fbox{$
 %
 \begin{itemize}%
 	\item $u_{R_1,A}(t)$ (Antwort nur auf AWe): Setze alle festen Quellen $=0$ und zeichne das Laplace-ESB:
-	\incfigs{a1g_Lapl}{Laplace-ESB für $t\geq t_S$ mit $R_i=R,\:L_i=L$ $t\geq t_S$ (Zeitverschiebung: $\tilde{t}(t):=t-t_S$) und }{a1g_Lapl}%
+	\incfigs{a1g_Lapl}{Laplace-ESB für $t\geq t_S$ mit $R_i=R,\:L_i=L$ (Zeitverschiebung: $\tilde{t}(t):=t-t_S$)}{a1g_Lapl}%
 	
-	\noindent Berechne $\tilde{\uI}_{L_1,A}(\us),\:\tilde{\uU}_{L_1,A}(\us)$  per Maschen-Z-Verfahren:
+	\noindent Berechne $\tilde{\uI}_{L_1,A}(\us),\:\tilde{\uU}_{L_1,A}(\us)$  per Maschen-Z-Verfahren, verwende wieder $A:=\frac{R}{L}$:
 	\begin{gather*}%
 		(\us L+R)\LGSMat{rr}{%
 			2&-1\\[2.5mm]%
@@ -418,7 +418,7 @@ Berechne zunächst $u_{R_1}(t)$ für alle Zeiten. Sei $t<t_S$.\marginpar{\fbox{$
 	%
 		g_1(t)&:=\lr{(}{%
 			\Theta(t')*u_{R_1,\delta}(t')%
-		}{)}(t)=\frac{2}{3}\lr{(}{%
+		}{)}(t)=\frac{2}{3}\Theta(t)\lr{(}{%
 			1-e^{-At}%
 		}{)}\quad\arr\quad u_{R_1,Q}(t)=V_0g_1(t-t_S),\qquad t\geq t_S%
 	\end{align*}%
@@ -426,19 +426,37 @@ Berechne zunächst $u_{R_1}(t)$ für alle Zeiten. Sei $t<t_S$.\marginpar{\fbox{$
 %
 Nun ist $u_{R_1}(t)$ für alle $t\im$ bekannt, berechne $i_{L_1}^{(1)}(t)$ über die Ableitung im Bereich von Distributionen:
 \begin{align*}%
-	i_{L_1}^{(1)}(t)&=-i_{R_1}^{(1)}(t)=-\frac{1}{R_1}u_{R_1}^{(1)}(t)\utcom{\parbox{1.8cm}{\centering$u_{R_1}(t)$ stetig\\ in $t=t_S$}}{=}\frac{-1}{R_1}\case{%
-		t<t_S:&0\\[2.5mm]%
-		t\geq t_S:&\lr{(}{%
-			-A\frac{V_0+RJ_0}{2} -(-A) \frac{2V_0}{3}%
-		}{)}\Theta(t-t_S)e^{-A(t-t_S)}%	
-	}\\[2.5mm]%
+	i_{L_1}^{(1)}(t)&=-i_{R_1}^{(1)}(t)=-\frac{1}{R_1}u_{R_1}^{(1)}(t)=-\frac{1}{R}\lr{[}{%
+		\frac{V_0+RJ_0}{2}\lr{(}{%
+			1-\Theta(t-t_S)+\Theta(t-t_S)e^{-A(t-t_S)}%
+		}{)}+V_0g_1(t-t_S)%
+	}{]}^{(1)}\\[2.5mm]%
 %
-	&=-A\frac{V_0-3RJ_0}{6R}\Theta(t-t_S)e^{-A(t-t_S)}\ucom{A=\frac{R}{L}}{=}-\frac{V_0-3RJ_0}{6L}\Theta(t-t_S)e^{-A(t-t_S)},\qquad t\im%
+	&=-\frac{1}{R}\lr{[}{%
+		\frac{V_0+RJ_0}{2}+\lr{(}{%
+			\frac{2V_0}{3}-\frac{V_0+RJ_0}{2}%
+		}{)}\Theta(t-t_S)\lr{(}{%
+			1-e^{-A(t-t_S)}%
+		}{)}%
+	}{]}^{(1)}\ceqn{\text{Ausblendeigenschaft}}\\[2.5mm]%
+%
+	&=-\frac{1}{R}\cdot\frac{V_0-3RJ_0}{6}A\Theta(t-t_S)e^{-A(t-t_S)}=\frac{3RJ_0-V_0}{6L}\Theta(t-t_S)e^{-A(t-t_S)},\qquad t\im%
 \end{align*}%
+%
+%\begin{align*}%
+%	i_{L_1}^{(1)}(t)&=-i_{R_1}^{(1)}(t)=-\frac{1}{R_1}u_{R_1}^{(1)}(t)\utcom{\parbox{1.8cm}{\centering$u_{R_1}(t)$ stetig\\ in $t=t_S$}}{=}\frac{-1}{R_1}\case{%
+%		t<t_S:&0\\[2.5mm]%
+%		t\geq t_S:&\lr{(}{%
+%			-A\frac{V_0+RJ_0}{2} -(-A) \frac{2V_0}{3}%
+%		}{)}\Theta(t-t_S)e^{-A(t-t_S)}%	
+%	}\\[2.5mm]%
+%%
+%	&=-A\frac{V_0-3RJ_0}{6R}\Theta(t-t_S)e^{-A(t-t_S)}\ucom{A=\frac{R}{L}}{=}-\frac{V_0-3RJ_0}{6L}\Theta(t-t_S)e^{-A(t-t_S)},\qquad t\im%
+%\end{align*}%
 %
 \anm Nach dem Schalten wird $u_{R_1}(t)$ für $t\geq t_S$ berechnet (statt für $t>t_S$ laut Kap.8 des Skripts), weil in \Fref{a1g_Lapl} die AWe \textit{vor} dem Schalten $\vec{x}_A(t_S^-)$ eingezeichnet wurden statt der AWe nach dem Schalten $\vec{x}_A(t_S^+)$, wie in Kap.8. Laut Kap.10 des Skripts berechnet die Laplace-Trafo durch diesen Unterschied die schnellen Ausgleichsvorgänge bei $t=t_S$ automatisch mit.
 %
-\anm Bei $t=t_S$ treten in $i_{L_1}^{(1)}(t)$ keine Dirac-Anteile auf, weil $u_{R_1}(t)$ bei $t=t_S$ stetig ist und deshalb beim Ableiten dort keine Dirac-Anteile liefert. Man kann auch $u_{R_1}(t)$ mit Hilfe von $\Theta$-Funktionen für alle Zeiten beschreiben und diese Darstellung ableiten -- dabei werden bei $t=t_S$ zwei Dirac-Anteile auftreten, die sich gegenseitig aufheben.
+\anm Bei $t=t_S$ treten in $i_{L_1}^{(1)}(t)$ keine Dirac-Anteile auf, weil $u_{R_1}(t)$ bei $t=t_S$ stetig ist und deshalb beim Ableiten dort keine Dirac-Anteile liefert.
 %
 %
 \nsection{Aufgabe 2}%

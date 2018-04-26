@@ -4,6 +4,7 @@
 %
 %  Created by WinFIG version 7.2 
 %  METADATA <version>1.0</version> 
+%  export 60% 
 %
 \setlength{\unitlength}{2368sp}%
 %
@@ -39,18 +40,18 @@
 \put(4255,-5242){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$L_3i_{L_3}(t_S^-)$}%
 }}}}
 %  METADATA <id>109</id> 
-\put(6383,-5239){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$L_2i_{L_2}(t_S^-)$}%
+\put(6383,-3115){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$L_2i_{L_2}(t_S^-)$}%
 }}}}
 %  METADATA <id>124</id> 
-\put(5555,-3116){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$L_2$}%
+\put(5555,-983){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$L_2$}%
 }}}}
 %  METADATA <id>126</id> 
-\put(6028,-2408){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tilde{\uI}_{L_2}(\us)$}%
-}}}}
-%  METADATA <id>140</id> 
-\put(5556,-991){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$R_2$}%
+\put(6028,-275){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\tilde{\uI}_{L_2,A}(\us)$}%
 }}}}
 %  METADATA <id>178</id> 
 \put(3428,-994){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$R_3$}%
+}}}}
+%  METADATA <id>191</id> 
+\put(5556,-5243){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$R_2$}%
 }}}}
 \end{picture}%
