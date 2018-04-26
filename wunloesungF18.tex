@@ -576,28 +576,28 @@ Berücksichtige die Steuerung:
 	}{%
 		\SI{400}{\kilo\ohm}+\SI{100}{\kilo\ohm}%
 	}\cdot\SI{4}{V}=\SI{0.8}{\volt}\ceqn{\text{einfacher Spg.-Teiler}}\\[2.5mm]%
-	M_2:&&0&=-V_{DD}-U_{D_1S_1}+R_2I_{D_2S_2}+U_{D_2S_2}\approx-V_{DD}-U_{G_1S_1}-R_2f(U_{G_1S_1})+U_{D_2S_2}\\[2.5mm]%
+	M_2:&&0&=-V_{DD}-U_{D_1S_1}+R_2I_{D_2}+U_{D_2S_2}\approx-V_{DD}-U_{G_1S_1}-R_2f(U_{G_1S_1})+U_{D_2S_2}\\[2.5mm]%
 %
-	&&\arr\quad U_{D_2S_2}&\approx V_{DD}+U_{G_1S_2}+R_2f(U_{G_1S_1})\\[2.5mm]%
-\intertext{$AG_1$ und $M_2$ liefern die Kennlinie $AG_2$ abhängig von der nichtlinearen Beziehung $f(U_{G_1S_1})$ (Hinweis!):}%
+	&&\arr\quad U_{D_2S_2}&\approx V_{DD}+U_{G_1S_1}+R_2f(U_{G_1S_1})\\[2.5mm]%
+\intertext{$AG_1$ und $M_2$ liefern die Kennlinie $AG_2$ abhängig von der nichtlinearen Beziehung $f(U_{G_1S_1})$:}%
 	\numberthis{a3a_AG2}AG_2:&&\LGSMat{c}{%
 		U_{D_2S_2}\\[2.5mm]%
 		I_{D_2}%
 	}{}&\approx\LGSMat{c}{%
-		-f(U_{G_1S_1})\\[2.5mm]%
-		V_{DD}+U_{G_1S_1}+R_2f(U_{G_1S_1})%
+		V_{DD}+U_{G_1S_1}+R_2f(U_{G_1S_1})\\[2.5mm]%
+		-f(U_{G_1S_1})%
 	}{}=\LGSMat{c}{%
 		\SI{4}{\volt}+U_{G_1S_1}+\SI{2}{\kilo\ohm}f(U_{G_1S_1})\\[2.5mm]%
 		-f(U_{G_1S_1})%
 	}{}%
 \end{align*}%
 %
-Für alle Werte von $U_{G_1S_1}$ aus dem ersten Kennlinienfeld liefert die Kennlinie $AG_1$ in \Fref{a3a_kennlinienfeld1} die zugehörigen Werte $I_{D_1S_1}$, trage sie in \Tref{a3a_kennlinienfeld1} ein:
+Für alle Werte von $U_{G_1S_1}$ aus dem ersten Kennlinienfeld (\Fref{a3a_kennlinienfeld1}) liefert die Kennlinie $AG_1$ in die zugehörigen Werte $I_{D_1}$, trage sie in \Tref{a3a_kennlinie} ein:
 \incfigs{kennlinienfeld1}{Arbeitspunkt $AP_1:\quad I_{D_1}\approx\SI{-0.345}{\milli\ampere},\quad U_{D_1S_1}\approx U_{G_1S_1}\approx\SI{-0.9}{\volt}$}{a3a_kennlinienfeld1}%
 
 \noindent Mit Hilfe von \Eref{a3a_AG2} berechne einige Punkte von $AG_2$:
 
-\tabs{a3a}{Wertetabelle für die Kennlinie $AG_2$}{a3a_kennlinie}%
+\tabs{a3a}{Wertetabelle für die Kennlinien $AG_1$ und $AG_2$}{a3a_kennlinie}%
 
 \noindent Zeichne die letzten drei Punkte aus \Tref{a3a_kennlinie} in das zweite Kennlinienfeld \Fref{a3a_kennlinienfeld2} ein und verbinde sie zur Ausgleichskurve $AG_2$. Der Schnittpunkt mit der Kennlinie $U_{G_2S_2}=0.8V$ liefert den Arbeitspunkt $AP_2$:
 \incfigs{kennlinienfeld2}{Arbeitspunkt $AP_2:\quad I_{D_2}\approx\SI{0.345}{\milli\ampere},\quad U_{D_2S_2}\approx\SI{2.42}{\volt},\quad U_{G_2S_2}\approx\SI{0.8}{\volt}$}{a3a_kennlinienfeld2}%
