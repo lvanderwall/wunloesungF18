@@ -70,7 +70,7 @@ Sei $t<t_S$ und $\jw\rightarrow\us\im[C]$\marginpar{\fbox{$C>0$}}. Unterscheide 
 }$ teilerfremd\grqq:
 %
 \begin{align*}%
-	\uP_1(\us)&\overset{!}{=}0\quad\arr\quad\us_1=-\frac{R_1}{L_1}\quad\vee\quad\uP_2(\us):=\us^2R_3CL_4+\us L_3+R_3\overset{!}{=}0,\\[2.5mm]%
+	\uP_1(\us)&\overset{!}{=}0\quad\arr\quad\us_1=-\frac{R_1}{L_1}\quad\vee\quad\uP_2(\us):=\us^2R_3CL_3+\us L_3+R_3\overset{!}{=}0,\\[2.5mm]%
 %
 	\numberthis{a1b_FG_Poly2}\uQ\lr{(}{%
 		-\frac{R_1}{L_1}%
@@ -90,7 +90,7 @@ Bleibt zu zeigen, dass $\uP_2(\us),\:\uQ(\us)$ teilerfremd sind. Erhalte per Pol
 		(\us L_1+R_1)(\us R_3C+1)%
 	}{%
 		\uP_2(\us)%
-	}=:\frac{\uP_3(\us)}{\uP_2(\us)}%
+	}=:1+\frac{\uP_3(\us)}{\uP_2(\us)}%
 \]%
 %
 Verwende wieder, dass Teilerfremdheit bei Poly.-Div. erhalten bleibt, d.h. \glqq$\frac{\uQ(\us)}{\uP_2(\us)}$ teilerfremd\grqq $\Leftrightarrow$ \glqq$\frac{\uP_3(\us)}{\uP_2(\us)}$ teilerfremd\grqq. Prüfe die Teilerfremdheit von $\uP_2(\us),\:\uP_3(\us)$:
@@ -102,14 +102,14 @@ Verwende wieder, dass Teilerfremdheit bei Poly.-Div. erhalten bleibt, d.h. \glqq
 		-\frac{R_1}{L_1}%
 	}{)}&=\frac{R_1^2R_3CL_3}{L_1^2}-\frac{R_1L_3}{L_1}+R_3\utcom{\Eref{a1b_FG_Poly2}}{\neq}0,&\uP_2\lr{(}{%
 		-\frac{1}{R_3C}%
-	}{)}&=\cancel{\frac{L_3}{R_3C}}-\cancel{\frac{R_3}{CL_3}}+R_3=R_3>0%
+	}{)}&=\cancel{\frac{L_3}{R_3C}}-\cancel{\frac{L_3}{CR_3}}+R_3=R_3>0%
 \end{align*}%
 %
 $\uP_2(\us),\:\uP_3(\us)$ sind teilerfremd, also sind auch $\uP(\us),\:\uQ(\us)$ teilerfremd! Das NWM besitzt für $t<t_S$
 \[%
 	\lr{.}{%
 		\begin{aligned}%
-			\bullet\quad n_A&=4\text{ diff.-bare Var.: }\vec{x}_A(t)=(i_{L_1},\:i_{L_2},\:i_{L_3},\:u_C)^T\\[2.5mm]%
+			\bullet\quad n_A&=4\text{ diff.-bare Var.: }\vec{x}_A(t)=(i_{L_1},\:i_{L_2},\:i_{L_3},\:u_C)^T(t)\\[2.5mm]%
 		%
 			\bullet\quad n_R&\geq 2\text{ zustandsred. Glg.: }\begin{aligned}%
 				0&=i_{L_2}(t)+j(t)\\%
@@ -133,7 +133,7 @@ Für $C>0$ ist $\uQ(\us)$ ein Hurwitzpolynom 2.Grades, also haben alle nat. Freq
 	}=:\us L_2+R_2+\frac{\uP_4(\us)}{\uQ(\us)}%
 \]%
 %
-Die Prüfung auf Teilerfremdheit kann aus dem Fall $C>0$ übernommen werden, nur dass in \Eref{a1b_teilerfremd} die Nullstelle $\us_3$ wegfällt -- $\uH(\us)$ ist auch für $C=0$ teilerfremd! Das NWM besitzt für $t<t_S$:
+Die Prüfung auf Teilerfremdheit kann aus dem Fall $C>0$ übernommen werden, nur dass in \Eref{a1b_teilerfremd} die Nullstelle $\us_3=-\frac{1}{R_3C}$ wegfällt: $\uH(\us)$ ist auch für $C=0$ teilerfremd! Das NWM besitzt für $t<t_S$:
 %%
 %Teilerfremdheit bleibt bei Poly.-Div. erhalten, d.h. \glqq$\uH(\us)$ teilerfremd\grqq $\Leftrightarrow$ \glqq$\frac{\uP_4(\us)}{\uQ(\us)}$ teilerfremd\grqq:
 %\begin{align*}%
