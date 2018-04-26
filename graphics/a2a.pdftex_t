@@ -14,7 +14,7 @@
   \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
   \selectfont}%
 \fi\endgroup%
-\begin{picture}(8771,7389)(1405,-5717)
+\begin{picture}(8771,7395)(1405,-5723)
 %  METADATA <id>349</id> 
 \put(2954,-2291){\makebox(0,0)[b]{\smash{{\SetFigFont{6}{7.2}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,.56,0}$M_1$}%
 }}}}
@@ -73,7 +73,7 @@
 \put(5434,-637){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uU_{C_3}(\us)$}%
 }}}}
 %  METADATA <id>362</id> 
-\put(6145, 12){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uI_{C_3}(\us)$}%
+\put(6143, 71){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\uI_{C_3}(\us)$}%
 }}}}
 %  METADATA <id>360</id> 
 \put(5079,255){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$C_3$}%
