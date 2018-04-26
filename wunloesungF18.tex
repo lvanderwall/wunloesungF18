@@ -720,12 +720,14 @@ Berechne den FG:
 %
 %
 \nsection{Aufgabe 4}%
-Substituiere die Eingänge der Z-Parameter-DST $i_1(t),\:i_2(t)$ durch feste STQen, nach Aufgabe darf vorausgesetzt werden, dass das NWM nach Substitution eindeutig lösbar ist. Wandle $v(t),\: R_1$ in eine ESTQ um und fasse $R_1,\:C_1$ sowie $R_3,\:C_3$ zusammen, da ihre Teilgrößen weder berechnet werden sollen noch etwas steuern. $R_0$ liegt in Reihe zur STQ $\uI_1$ und kann weggelassen, die Rückgewinnung von $\uU_1$ steht in \Fref{a4}. Verwende $\uY_i=\jw C_i+\frac{1}{R_i},\quad G_i:=\frac{1}{R_i}$:
+Substituiere die Eingänge der Z-Parameter-DST $i_1(t),\:i_2(t)$ durch feste STQen, nach Aufgabe darf vorausgesetzt werden, dass das NWM nach Substitution eindeutig lösbar ist. Wandle $v(t),\: R_1$ in eine ESTQ um und fasse $R_1,\:C_1$ sowie $R_3,\:C_3$ zusammen, da ihre Teilgrößen weder berechnet werden sollen noch etwas steuern.
+
+$R_0$ liegt in Reihe zur STQ $\uI_1$ und kann weggelassen werden; die Rückgewinnung von $\uU_1$ steht in \Fref{a4}. Verwende $\uY_i=\jw C_i+\frac{1}{R_i},\quad G_i:=\frac{1}{R_i}$:
 \incfigs{a4}{%
 	Vereinfachtes ESB im Bereich der KWSR nach Subst. von $\uI_{1,2},\quad \uU_1=R_0\uI_1+\UPot_1$%
 }{a4}%
 
-\noindent Die Steuerungspannung $u(t)$ kann \textit{nicht} direkt nur durch feste Quellen berechnet werden -- berechne deshalb die Ausgänge $\uU_1,\:\uU_2$ der Z-Parameter-DST mit dem Knoten-$\uY$-Verfahren! Wandle $v(t),\: R_1$ in eine ESTQ um und stelle die Matrix mit den Regeln aus dem Skript direkt auf:
+\noindent Die Steuerungspannung $u(t)$ kann \textit{nicht} direkt nur durch feste Quellen berechnet werden -- berechne deshalb die Ausgänge $\uU_1,\:\uU_2$ der Z-Parameter-DST mit dem Knoten-$\uY$-Verfahren! Stelle die Matrix mit den Regeln aus dem Skript direkt auf:
 \begin{multline*}%
 	\PotMat\overset{\bullet}{\vec{\uU}}:=\LGSMat{ccc}{%
 		\jw C_2+\uY_1&-\uY_1&-\jw C_2\\[2.5mm]%
@@ -774,4 +776,6 @@ Berechne die Z-Parameter-DST mit der Cramer'schen Regel:
 	}{},\qquad\PotMat_i^*=\text{\glqq$\PotMat$, substituiere Spalte $i$ durch $\PotVec$\grqq}%
 \end{multline*}%
 \anm Fasst man die Zweige mit $i_2(t),\:R_4$ und $R_1,\:C_1,\:v(t)$ in je eine ESPQ  um und verschiebt $i_1(t)$ in einer Masche, liefert das Maschen-$\uZ$-Verfahren eine kleinere Matrix und wäre eigentlich die bessere Wahl; insbesondere, weil die Rücktrafo/Rückgewinnung in dieser Aufgabe nicht benötigt wird. Da in der Lösung aber die Determinanten-Funktion verwendet werden darf, spielt die Größe der Matrix in dieser Aufgabe keine Rolle\ldots
+
+\anm Das Ordnen der beiden Zählerdeterminanten nach $\uI_1,\:\uI_2$ und dem Rest für den Koeffizientenvergleich ergibt riesige Terme, selbst wenn man entstehenden Determinanten nicht ausrechnet. Hoffentlich reicht diese Lösung aus\ldots
 \input{\defaultPath ending}
