@@ -14,7 +14,7 @@
   \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
   \selectfont}%
 \fi\endgroup%
-\begin{picture}(1932,3475)(3167,-5687)
+\begin{picture}(1932,3486)(3167,-5687)
 %  METADATA <id>30</id> 
 \put(4017,-3706){\makebox(0,0)[b]{\smash{{\SetFigFont{6}{7.2}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}4}%
 }}}}

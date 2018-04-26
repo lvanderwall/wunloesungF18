@@ -542,16 +542,16 @@ Zeichne den Graph des transformierten NWMs:
 \[%
 	\ubcom{=:\MMat(\us)}{\LGSMat{ccc}{%
 		R_3&	0&								0\red{-r_2}\\[2.5mm]%
-		0&		\uZ_1(\us)+R_2+\frac{1}{\us C_2}&	-R_2\red{-r_1}\\[2.5mm]%
-		0&		-R_2&							R_2+\frac{1}{\us C_2}\red{+r_1}%
+		0&		R_2+\frac{1}{\us C_2}&	-R_2\red{-r_1}\\[2.5mm]%
+		0&		-R_2&					\uZ_1(\us)+R_2+\frac{1}{\us C_3}\red{+r_1}%
 	}{}}\LGSMat{c}{%
 		\MStrom_1\\[2.5mm]%
 		\MStrom_2\\[2.5mm]%
 		\MStrom_3%
 	}{}(\us)=\ubcom{=:\MVec_0(\us)}{\LGSMat{c}{%
-		\red{\cancel{-r_2\uI_1(\us)}+r_2\uJ(\us)}\\[2.5mm]%
-		\red{\cancel{-r_1\uI_1(\us)}}-\frac{u_{out,0}}{\us}\red{+r_1\uJ(\us)}\\[2.5mm]%
-		\frac{u_{C_1,0}}{\us}-\uZ_1(\us)\uJ(\us)-\frac{u_{C_3,0}}{\us}+\red{\cancel{r_1\uI_1(\us)}}\red{-r_1\uJ(\us)}%
+		\cancel{-r_2\uI_1(\us)}\red{+r_2\uJ(\us)}\\[2.5mm]%
+		\cancel{-r_1\uI_1(\us)}-\frac{u_{out,0}}{\us}\red{+r_1\uJ(\us)}\\[2.5mm]%
+		\frac{u_{C_1,0}}{\us}-\uZ_1(\us)\uJ(\us)-\frac{u_{C_3,0}}{\us}+\cancel{r_1\uI_1(\us)}\red{-r_1\uJ(\us)}%
 	}{}}%
 \]%
 %
