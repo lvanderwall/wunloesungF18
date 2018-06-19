@@ -15,14 +15,11 @@
   \selectfont}%
 \fi\endgroup%
 \begin{picture}(8888,5250)(461,-5108)
-%  METADATA <id>361</id> 
-\put(7383,-2173){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{1,0,0}e) - g)}%
+%  METADATA <id>357</id> 
+\put(8505,-106){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,.56,0}$S_2$}%
 }}}}
 %  METADATA <id>356</id> 
 \put(3308,-106){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,.56,0}$S_1$}%
-}}}}
-%  METADATA <id>357</id> 
-\put(8505,-106){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,.56,0}$S_2$}%
 }}}}
 %  METADATA <id>133</id> 
 \put(2264,-220){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$R_2$}%
@@ -38,6 +35,9 @@
 }}}}
 %  METADATA <id>278</id> 
 \put(5797,-3827){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$L_3$}%
+}}}}
+%  METADATA <id>280</id> 
+\put(5324,-4535){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$i_{L_3}(t)$}%
 }}}}
 %  METADATA <id>295</id> 
 \put(8623,-1697){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$L_1$}%
@@ -62,8 +62,5 @@
 }}}}
 %  METADATA <id>370</id> 
 \put(3789,-854){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$i_{L_2}(t)$}%
-}}}}
-%  METADATA <id>280</id> 
-\put(5324,-4535){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$i_{L_3}(t)$}%
 }}}}
 \end{picture}%
