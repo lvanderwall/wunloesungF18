@@ -266,23 +266,30 @@ Sei $t<t_S$. Die AWe vor dem Schalten $\vec{x}_A(t_S^-)$ erfüllen nach A1b) zwe
 	i_{L_1}(t)-i_{L_2}(t)-i_{L_3}(t)=0\quad\arr\quad i_{L_1}(t_S^-)-i_{L_2}(t_S^-)-i_{L_3}(t_S^-)=0%
 }%
 %
-Sei nun $t>t_S$. Die STQ $j(t)$ wird kurzgeschlossen und kann weggelassen werden:
-\incfigs{a1d}{NWM für $t>t_S$. Ab e) ist $R_i=R,\:C=0,\:L_i=L\quad\arr\quad C\:\rightarrow\:\text{LL}$}{a1d}%
+Sei nun $t>t_S$. Suche alle ZRGen. Die STQ $j(t)$ wird kurzgeschlossen und kann weggelassen werden:
+\incfigs{a1d}{NWM für $t>t_S$ mit $R_i=R,\: L_i=L$. Ab e) ist $C=0\quad\arr\quad C\:\rightarrow\:\red{\text{LL}}$}{a1d}%
 
-\noindent Das NWM besitzt wegen $C>0$
+\noindent Mit der Vereinfachung $R_i=R,\: L_i=L$ werden die Teilnetze aus \Fref{a1a} und \Fref{a1d} parallel zu den festen Quellen $j(t)$ bzw. $v(t)$ identisch. Also haben beide NWMe die gleiche Eingangsadmittanz $\uY_{in}$:
 \[%
-	\lr{.}{\begin{aligned}%
-		\bullet\quad&\text{keine gesteuerten Quellen}\\[2.5mm]%
-	%
-		\bullet\quad&R,\:C,\:L\neq 0\text{ nur mit je gleichem VZ}%
-	\end{aligned}}{\}}\quad\arr\quad\begin{minipage}[c]{6cm}%
-		Es kann nur ZRGen vom Typ \glqq\casetxt{MGL}{SGL} nur aus \casetxt{$C$}{$L$} und/oder festen \casetxt{SPQ}{STQ}\grqq\: besitzen!%
-	\end{minipage}%
+	\uH_4(\jw):=\frac{\uI_{L_1}}{\uV}=-\uY_{in}=-\frac{\uJ}{\uI_j}=-\frac{1}{\uH(\jw)}=-\frac{\uQ(\jw)}{\uP(\jw)}\ceqn{%
+		\text{teilerfremd nach A1b)}%
+	}%
 \]%
 %
-Das NWM aus \Fref{a1d} besitzt genau $n_R=1$ zustandsreduzierende Gleichung (ZRG) dieser Typen:
+Sei wieder $\jw\rightarrow\us\im[C]$. Das NWM besitzt für $t>t_S$
+\[
+	\lr{.}{\begin{aligned}%
+		\bullet\quad n_A&=4\text{ diff.-bare Var.: }\vec{x}_A(t)=(i_{L_1},\:i_{L_2},\:i_{L_3},\:u_C)^T(t)\\[2.5mm]%
+		%
+		\bullet\quad n_R&\geq 1\text{ zustandsred. Glg.: }0=i_{L_1}(t)-i_{L_2}(t)-i_{L_3}(t)%
+	\end{aligned}}{\}}\begin{gathered}%
+		3=4-1\geq n_A-n_R=n\geq\grad\uP(\us)=3\\[2.5mm]%
+		\arr\quad\uP(\us)\text{ liefert alle $n=3$ nat. Freq.!}
+	\end{gathered}%
+\]
+Das NWM aus \Fref{a1d} besitzt genau $n_R=n_A-n=1$ zustandsreduzierende Gleichung:
 \[%
-	S_1:\quad i_{L_1}(t)-i_{L_2}(t)-i_{L_3}(t)=0\quad\arr\quad i_{L_1}(t_S^+)-i_{L_2}(t_S^+)-i_{L_3}(t_S^+)=0%
+	i_{L_1}(t)-i_{L_2}(t)-i_{L_3}(t)=0\quad\arr\quad i_{L_1}(t_S^+)-i_{L_2}(t_S^+)-i_{L_3}(t_S^+)=0%
 \]%
 %
 Ein Vergleich mit \Eref{a1d_ZRG_ts-} zeigt, dass die AWe $\vec{x}_A(t_S^-)$ auch alle ZRGen bei $t=t_S^+$ erfüllen -- also sind die AWe bei $t=t_S^-$ hier (trotz ZRGen nach dem Schalten) immer konsistent!
@@ -358,7 +365,7 @@ Sei $t<t_S$.\marginpar{\fbox{$t<t_S$}} Das als asympt. stabil vorausgesetzte NWM
 \anm Die obige Darstellung für $u_{R_1}(t)$ gilt sogar für alle $t\im$.
 %
 %
-\nsubsection{Aufgabe 1g)}%
+\clearpage\nsubsection{Aufgabe 1g)}%
 Berechne zunächst $u_{R_1}(t)$ für alle Zeiten. Sei $t<t_S$.\marginpar{\fbox{$t<t_S$}} Das als asympt. stabil vorausgesetzte NWM existiert für alle Zeiten und befindet sich für $t<t_S$ im DC-EZ, da $v(t)=V_0,\: j(t)=J_0$:
 \incfigs{a1g_DC}{DC-ESB für $t<t_S$ mit $R_i=R$}{a1g_DC}%
 
@@ -464,7 +471,7 @@ Nun ist $u_{R_1}(t)$ abschnittsweise für alle $t\im$ bekannt. Schreibe es mit H
 \anm Bei $t=t_S$ treten in $i_{L_1}^{(1)}(t)$ keine Dirac-Anteile auf, weil $u_{R_1}(t)$ bei $t=t_S$ stetig ist und deshalb beim Ableiten dort keine Dirac-Anteile liefert.
 %
 %
-\nsection{Aufgabe 2}%
+\clearpage\nsection{Aufgabe 2}%
 \nsubsection{Aufgabe 2a)}%
 \incfigs{a2a}{NWM im Laplace-Bereich}{a2a}%
 %
@@ -507,7 +514,7 @@ Stelle die Matrix mit den Regeln aus dem Skript direkt auf. Verwende $\uZ_1(\us)
 \]%
 %
 %
-\nsubsection{Aufgabe 2d)}%
+\clearpage\nsubsection{Aufgabe 2d)}%
 Betrachte die Antwort aus dem RZ$\quad\arr\quad$Setze alle AW-Quellen zu Null! Verschiebe $\uJ(\us)$ in $M_1$:
 \incfigs{a2d}{Verschiebe $\uJ(\us)$ in $M_1$}{a2d}%
 
