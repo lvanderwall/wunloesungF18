@@ -14,7 +14,7 @@
   \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
   \selectfont}%
 \fi\endgroup%
-\begin{picture}(8310,5172)(946,-5368)
+\begin{picture}(8310,5173)(946,-5369)
 %  METADATA <id>20</id> 
 \put(7501,-2527){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$AP_2$}%
 }}}}
@@ -22,7 +22,7 @@
 \put(8191,-5303){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{1,0,0}$\Delta U_{D_2S_2}$}%
 }}}}
 %  METADATA <id>14</id> 
-\put(6320,-1582){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$AG_2$}%
+\put(6422,-1464){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$AG_2\acc I_{2,DC}(V)$}%
 }}}}
 %  METADATA <id>54</id> 
 \put(9214,-2822){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{1,0,0}$\Delta I_{D_2}$}%
